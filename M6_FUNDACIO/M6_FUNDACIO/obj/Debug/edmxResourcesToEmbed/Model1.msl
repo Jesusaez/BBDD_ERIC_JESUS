@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FundacionesDBModelStoreContainer" CdmEntityContainer="FundacionesDBEntities">
+    <EntitySetMapping Name="Categoria">
+      <EntityTypeMapping TypeName="FundacionesDBModel.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ciutat">
+      <EntityTypeMapping TypeName="FundacionesDBModel.Ciutat">
+        <MappingFragment StoreEntitySet="Ciutat">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDPais" ColumnName="IDPais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Continente">
+      <EntityTypeMapping TypeName="FundacionesDBModel.Continente">
+        <MappingFragment StoreEntitySet="Continente">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fundacion">
+      <EntityTypeMapping TypeName="FundacionesDBModel.Fundacion">
+        <MappingFragment StoreEntitySet="Fundacion">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono_Contacto" ColumnName="Telefono_Contacto" />
+          <ScalarProperty Name="Email_Contacto" ColumnName="Email_Contacto" />
+          <ScalarProperty Name="Link_Web" ColumnName="Link_Web" />
+          <ScalarProperty Name="HorarioVisita" ColumnName="HorarioVisita" />
+          <ScalarProperty Name="FotoWeb" ColumnName="FotoWeb" />
+          <ScalarProperty Name="FotoRecinto" ColumnName="FotoRecinto" />
+          <ScalarProperty Name="IDContinent" ColumnName="IDContinent" />
+          <ScalarProperty Name="IDPais" ColumnName="IDPais" />
+          <ScalarProperty Name="IDCiutat" ColumnName="IDCiutat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FundacionCategoria">
+      <EntityTypeMapping TypeName="FundacionesDBModel.FundacionCategoria">
+        <MappingFragment StoreEntitySet="FundacionCategoria">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FundacionID" ColumnName="FundacionID" />
+          <ScalarProperty Name="CategoriaID" ColumnName="CategoriaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GaleriaImagenes">
+      <EntityTypeMapping TypeName="FundacionesDBModel.GaleriaImagenes">
+        <MappingFragment StoreEntitySet="GaleriaImagenes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FundacionID" ColumnName="FundacionID" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pais">
+      <EntityTypeMapping TypeName="FundacionesDBModel.Pais">
+        <MappingFragment StoreEntitySet="Pais">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDContinente" ColumnName="IDContinente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ressenya">
+      <EntityTypeMapping TypeName="FundacionesDBModel.Ressenya">
+        <MappingFragment StoreEntitySet="Ressenya">
+          <ScalarProperty Name="ID_Ressenya" ColumnName="ID_Ressenya" />
+          <ScalarProperty Name="ID_Fundacion" ColumnName="ID_Fundacion" />
+          <ScalarProperty Name="Valoracio" ColumnName="Valoracio" />
+          <ScalarProperty Name="Descripcio" ColumnName="Descripcio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

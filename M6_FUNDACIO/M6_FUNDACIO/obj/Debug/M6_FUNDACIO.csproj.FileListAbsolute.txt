@@ -13,3 +13,19 @@ C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDA.FAA1972C.Up2Date
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.exe
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.pdb
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\bin\Debug\M6_FUNDACIO.exe.config
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\bin\Debug\M6_FUNDACIO.exe
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\bin\Debug\M6_FUNDACIO.pdb
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\bin\Debug\EntityFramework.dll
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\bin\Debug\EntityFramework.xml
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.csproj.AssemblyReference.cache
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmGestioPais.resources
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FrmMain.resources
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.Properties.Resources.resources
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.csproj.GenerateResource.cache
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.csproj.CoreCompileInputs.cache
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDA.FAA1972C.Up2Date
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.exe
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.pdb

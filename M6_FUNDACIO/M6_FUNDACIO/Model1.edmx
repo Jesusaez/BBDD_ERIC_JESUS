@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FundacionesDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ciutat">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="IDPais" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Continente">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Fundacion">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Direccion" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Telefono_Contacto" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Email_Contacto" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Link_Web" Type="nvarchar(max)" />
+          <Property Name="HorarioVisita" Type="nvarchar(max)" />
+          <Property Name="FotoWeb" Type="nvarchar(max)" />
+          <Property Name="FotoRecinto" Type="nvarchar(max)" />
+          <Property Name="IDContinent" Type="int" />
+          <Property Name="IDPais" Type="int" />
+          <Property Name="IDCiutat" Type="int" />
+        </EntityType>
+        <EntityType Name="FundacionCategoria">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FundacionID" Type="int" Nullable="false" />
+          <Property Name="CategoriaID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GaleriaImagenes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FundacionID" Type="int" Nullable="false" />
+          <Property Name="Imagen" Type="nvarchar(max)" />
+          <Property Name="Descripcion" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Pais">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="IDContinente" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ressenya">
+          <Key>
+            <PropertyRef Name="ID_Ressenya" />
+          </Key>
+          <Property Name="ID_Ressenya" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_Fundacion" Type="int" Nullable="false" />
+          <Property Name="Valoracio" Type="int" Nullable="false" />
+          <Property Name="Descripcio" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Ciutat__IDPais__3C69FB99">
+          <End Role="Pais" Type="Self.Pais" Multiplicity="1" />
+          <End Role="Ciutat" Type="Self.Ciutat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pais">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ciutat">
+              <PropertyRef Name="IDPais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Fundacion__Categ__4AB81AF0">
+          <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+          <End Role="FundacionCategoria" Type="Self.FundacionCategoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FundacionCategoria">
+              <PropertyRef Name="CategoriaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Fundacion__Funda__49C3F6B7">
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="1" />
+          <End Role="FundacionCategoria" Type="Self.FundacionCategoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fundacion">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FundacionCategoria">
+              <PropertyRef Name="FundacionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Fundacion__IDCiu__412EB0B6">
+          <End Role="Ciutat" Type="Self.Ciutat" Multiplicity="0..1" />
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ciutat">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Fundacion">
+              <PropertyRef Name="IDCiutat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Fundacion__IDCon__3F466844">
+          <End Role="Continente" Type="Self.Continente" Multiplicity="0..1" />
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Continente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Fundacion">
+              <PropertyRef Name="IDContinent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Fundacion__IDPai__403A8C7D">
+          <End Role="Pais" Type="Self.Pais" Multiplicity="0..1" />
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pais">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Fundacion">
+              <PropertyRef Name="IDPais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GaleriaIm__Funda__4D94879B">
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="1" />
+          <End Role="GaleriaImagenes" Type="Self.GaleriaImagenes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fundacion">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GaleriaImagenes">
+              <PropertyRef Name="FundacionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pais__IDContinen__398D8EEE">
+          <End Role="Continente" Type="Self.Continente" Multiplicity="1" />
+          <End Role="Pais" Type="Self.Pais" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Continente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Pais">
+              <PropertyRef Name="IDContinente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ressenya__ID_Fun__44FF419A">
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="1" />
+          <End Role="Ressenya" Type="Self.Ressenya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fundacion">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ressenya">
+              <PropertyRef Name="ID_Fundacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FundacionesDBModelStoreContainer">
+          <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ciutat" EntityType="Self.Ciutat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Continente" EntityType="Self.Continente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Fundacion" EntityType="Self.Fundacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FundacionCategoria" EntityType="Self.FundacionCategoria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GaleriaImagenes" EntityType="Self.GaleriaImagenes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pais" EntityType="Self.Pais" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ressenya" EntityType="Self.Ressenya" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Ciutat__IDPais__3C69FB99" Association="Self.FK__Ciutat__IDPais__3C69FB99">
+            <End Role="Pais" EntitySet="Pais" />
+            <End Role="Ciutat" EntitySet="Ciutat" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Fundacion__Categ__4AB81AF0" Association="Self.FK__Fundacion__Categ__4AB81AF0">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="FundacionCategoria" EntitySet="FundacionCategoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Fundacion__Funda__49C3F6B7" Association="Self.FK__Fundacion__Funda__49C3F6B7">
+            <End Role="Fundacion" EntitySet="Fundacion" />
+            <End Role="FundacionCategoria" EntitySet="FundacionCategoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Fundacion__IDCiu__412EB0B6" Association="Self.FK__Fundacion__IDCiu__412EB0B6">
+            <End Role="Ciutat" EntitySet="Ciutat" />
+            <End Role="Fundacion" EntitySet="Fundacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Fundacion__IDCon__3F466844" Association="Self.FK__Fundacion__IDCon__3F466844">
+            <End Role="Continente" EntitySet="Continente" />
+            <End Role="Fundacion" EntitySet="Fundacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Fundacion__IDPai__403A8C7D" Association="Self.FK__Fundacion__IDPai__403A8C7D">
+            <End Role="Pais" EntitySet="Pais" />
+            <End Role="Fundacion" EntitySet="Fundacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GaleriaIm__Funda__4D94879B" Association="Self.FK__GaleriaIm__Funda__4D94879B">
+            <End Role="Fundacion" EntitySet="Fundacion" />
+            <End Role="GaleriaImagenes" EntitySet="GaleriaImagenes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pais__IDContinen__398D8EEE" Association="Self.FK__Pais__IDContinen__398D8EEE">
+            <End Role="Continente" EntitySet="Continente" />
+            <End Role="Pais" EntitySet="Pais" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ressenya__ID_Fun__44FF419A" Association="Self.FK__Ressenya__ID_Fun__44FF419A">
+            <End Role="Fundacion" EntitySet="Fundacion" />
+            <End Role="Ressenya" EntitySet="Ressenya" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FundacionesDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="FundacionCategoria" Relationship="Self.FK__Fundacion__Categ__4AB81AF0" FromRole="Categoria" ToRole="FundacionCategoria" />
+        </EntityType>
+        <EntityType Name="Ciutat">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IDPais" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Pais" Relationship="Self.FK__Ciutat__IDPais__3C69FB99" FromRole="Ciutat" ToRole="Pais" />
+          <NavigationProperty Name="Fundacion" Relationship="Self.FK__Fundacion__IDCiu__412EB0B6" FromRole="Ciutat" ToRole="Fundacion" />
+        </EntityType>
+        <EntityType Name="Continente">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Fundacion" Relationship="Self.FK__Fundacion__IDCon__3F466844" FromRole="Continente" ToRole="Fundacion" />
+          <NavigationProperty Name="Pais" Relationship="Self.FK__Pais__IDContinen__398D8EEE" FromRole="Continente" ToRole="Pais" />
+        </EntityType>
+        <EntityType Name="Fundacion">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telefono_Contacto" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email_Contacto" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Link_Web" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HorarioVisita" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FotoWeb" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FotoRecinto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDContinent" Type="Int32" />
+          <Property Name="IDPais" Type="Int32" />
+          <Property Name="IDCiutat" Type="Int32" />
+          <NavigationProperty Name="Ciutat" Relationship="Self.FK__Fundacion__IDCiu__412EB0B6" FromRole="Fundacion" ToRole="Ciutat" />
+          <NavigationProperty Name="Continente" Relationship="Self.FK__Fundacion__IDCon__3F466844" FromRole="Fundacion" ToRole="Continente" />
+          <NavigationProperty Name="FundacionCategoria" Relationship="Self.FK__Fundacion__Funda__49C3F6B7" FromRole="Fundacion" ToRole="FundacionCategoria" />
+          <NavigationProperty Name="Pais" Relationship="Self.FK__Fundacion__IDPai__403A8C7D" FromRole="Fundacion" ToRole="Pais" />
+          <NavigationProperty Name="GaleriaImagenes" Relationship="Self.FK__GaleriaIm__Funda__4D94879B" FromRole="Fundacion" ToRole="GaleriaImagenes" />
+          <NavigationProperty Name="Ressenya" Relationship="Self.FK__Ressenya__ID_Fun__44FF419A" FromRole="Fundacion" ToRole="Ressenya" />
+        </EntityType>
+        <EntityType Name="FundacionCategoria">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FundacionID" Type="Int32" Nullable="false" />
+          <Property Name="CategoriaID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Categoria" Relationship="Self.FK__Fundacion__Categ__4AB81AF0" FromRole="FundacionCategoria" ToRole="Categoria" />
+          <NavigationProperty Name="Fundacion" Relationship="Self.FK__Fundacion__Funda__49C3F6B7" FromRole="FundacionCategoria" ToRole="Fundacion" />
+        </EntityType>
+        <EntityType Name="GaleriaImagenes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FundacionID" Type="Int32" Nullable="false" />
+          <Property Name="Imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Fundacion" Relationship="Self.FK__GaleriaIm__Funda__4D94879B" FromRole="GaleriaImagenes" ToRole="Fundacion" />
+        </EntityType>
+        <EntityType Name="Pais">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IDContinente" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Ciutat" Relationship="Self.FK__Ciutat__IDPais__3C69FB99" FromRole="Pais" ToRole="Ciutat" />
+          <NavigationProperty Name="Continente" Relationship="Self.FK__Pais__IDContinen__398D8EEE" FromRole="Pais" ToRole="Continente" />
+          <NavigationProperty Name="Fundacion" Relationship="Self.FK__Fundacion__IDPai__403A8C7D" FromRole="Pais" ToRole="Fundacion" />
+        </EntityType>
+        <EntityType Name="Ressenya">
+          <Key>
+            <PropertyRef Name="ID_Ressenya" />
+          </Key>
+          <Property Name="ID_Ressenya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Fundacion" Type="Int32" Nullable="false" />
+          <Property Name="Valoracio" Type="Int32" Nullable="false" />
+          <Property Name="Descripcio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Fundacion" Relationship="Self.FK__Ressenya__ID_Fun__44FF419A" FromRole="Ressenya" ToRole="Fundacion" />
+        </EntityType>
+        <Association Name="FK__Fundacion__Categ__4AB81AF0">
+          <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+          <End Role="FundacionCategoria" Type="Self.FundacionCategoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FundacionCategoria">
+              <PropertyRef Name="CategoriaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ciutat__IDPais__3C69FB99">
+          <End Role="Pais" Type="Self.Pais" Multiplicity="1" />
+          <End Role="Ciutat" Type="Self.Ciutat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pais">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ciutat">
+              <PropertyRef Name="IDPais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Fundacion__IDCiu__412EB0B6">
+          <End Role="Ciutat" Type="Self.Ciutat" Multiplicity="0..1" />
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ciutat">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Fundacion">
+              <PropertyRef Name="IDCiutat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Fundacion__IDCon__3F466844">
+          <End Role="Continente" Type="Self.Continente" Multiplicity="0..1" />
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Continente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Fundacion">
+              <PropertyRef Name="IDContinent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pais__IDContinen__398D8EEE">
+          <End Role="Continente" Type="Self.Continente" Multiplicity="1" />
+          <End Role="Pais" Type="Self.Pais" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Continente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Pais">
+              <PropertyRef Name="IDContinente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Fundacion__Funda__49C3F6B7">
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="1" />
+          <End Role="FundacionCategoria" Type="Self.FundacionCategoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fundacion">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FundacionCategoria">
+              <PropertyRef Name="FundacionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Fundacion__IDPai__403A8C7D">
+          <End Role="Pais" Type="Self.Pais" Multiplicity="0..1" />
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pais">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Fundacion">
+              <PropertyRef Name="IDPais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GaleriaIm__Funda__4D94879B">
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="1" />
+          <End Role="GaleriaImagenes" Type="Self.GaleriaImagenes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fundacion">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GaleriaImagenes">
+              <PropertyRef Name="FundacionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ressenya__ID_Fun__44FF419A">
+          <End Role="Fundacion" Type="Self.Fundacion" Multiplicity="1" />
+          <End Role="Ressenya" Type="Self.Ressenya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fundacion">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ressenya">
+              <PropertyRef Name="ID_Fundacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FundacionesDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+          <EntitySet Name="Ciutat" EntityType="Self.Ciutat" />
+          <EntitySet Name="Continente" EntityType="Self.Continente" />
+          <EntitySet Name="Fundacion" EntityType="Self.Fundacion" />
+          <EntitySet Name="FundacionCategoria" EntityType="Self.FundacionCategoria" />
+          <EntitySet Name="GaleriaImagenes" EntityType="Self.GaleriaImagenes" />
+          <EntitySet Name="Pais" EntityType="Self.Pais" />
+          <EntitySet Name="Ressenya" EntityType="Self.Ressenya" />
+          <AssociationSet Name="FK__Fundacion__Categ__4AB81AF0" Association="Self.FK__Fundacion__Categ__4AB81AF0">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="FundacionCategoria" EntitySet="FundacionCategoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ciutat__IDPais__3C69FB99" Association="Self.FK__Ciutat__IDPais__3C69FB99">
+            <End Role="Pais" EntitySet="Pais" />
+            <End Role="Ciutat" EntitySet="Ciutat" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Fundacion__IDCiu__412EB0B6" Association="Self.FK__Fundacion__IDCiu__412EB0B6">
+            <End Role="Ciutat" EntitySet="Ciutat" />
+            <End Role="Fundacion" EntitySet="Fundacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Fundacion__IDCon__3F466844" Association="Self.FK__Fundacion__IDCon__3F466844">
+            <End Role="Continente" EntitySet="Continente" />
+            <End Role="Fundacion" EntitySet="Fundacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pais__IDContinen__398D8EEE" Association="Self.FK__Pais__IDContinen__398D8EEE">
+            <End Role="Continente" EntitySet="Continente" />
+            <End Role="Pais" EntitySet="Pais" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Fundacion__Funda__49C3F6B7" Association="Self.FK__Fundacion__Funda__49C3F6B7">
+            <End Role="Fundacion" EntitySet="Fundacion" />
+            <End Role="FundacionCategoria" EntitySet="FundacionCategoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Fundacion__IDPai__403A8C7D" Association="Self.FK__Fundacion__IDPai__403A8C7D">
+            <End Role="Pais" EntitySet="Pais" />
+            <End Role="Fundacion" EntitySet="Fundacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GaleriaIm__Funda__4D94879B" Association="Self.FK__GaleriaIm__Funda__4D94879B">
+            <End Role="Fundacion" EntitySet="Fundacion" />
+            <End Role="GaleriaImagenes" EntitySet="GaleriaImagenes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ressenya__ID_Fun__44FF419A" Association="Self.FK__Ressenya__ID_Fun__44FF419A">
+            <End Role="Fundacion" EntitySet="Fundacion" />
+            <End Role="Ressenya" EntitySet="Ressenya" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FundacionesDBModelStoreContainer" CdmEntityContainer="FundacionesDBEntities">
+          <EntitySetMapping Name="Categoria">
+            <EntityTypeMapping TypeName="FundacionesDBModel.Categoria">
+              <MappingFragment StoreEntitySet="Categoria">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ciutat">
+            <EntityTypeMapping TypeName="FundacionesDBModel.Ciutat">
+              <MappingFragment StoreEntitySet="Ciutat">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDPais" ColumnName="IDPais" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Continente">
+            <EntityTypeMapping TypeName="FundacionesDBModel.Continente">
+              <MappingFragment StoreEntitySet="Continente">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nom" ColumnName="Nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fundacion">
+            <EntityTypeMapping TypeName="FundacionesDBModel.Fundacion">
+              <MappingFragment StoreEntitySet="Fundacion">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono_Contacto" ColumnName="Telefono_Contacto" />
+                <ScalarProperty Name="Email_Contacto" ColumnName="Email_Contacto" />
+                <ScalarProperty Name="Link_Web" ColumnName="Link_Web" />
+                <ScalarProperty Name="HorarioVisita" ColumnName="HorarioVisita" />
+                <ScalarProperty Name="FotoWeb" ColumnName="FotoWeb" />
+                <ScalarProperty Name="FotoRecinto" ColumnName="FotoRecinto" />
+                <ScalarProperty Name="IDContinent" ColumnName="IDContinent" />
+                <ScalarProperty Name="IDPais" ColumnName="IDPais" />
+                <ScalarProperty Name="IDCiutat" ColumnName="IDCiutat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FundacionCategoria">
+            <EntityTypeMapping TypeName="FundacionesDBModel.FundacionCategoria">
+              <MappingFragment StoreEntitySet="FundacionCategoria">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FundacionID" ColumnName="FundacionID" />
+                <ScalarProperty Name="CategoriaID" ColumnName="CategoriaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GaleriaImagenes">
+            <EntityTypeMapping TypeName="FundacionesDBModel.GaleriaImagenes">
+              <MappingFragment StoreEntitySet="GaleriaImagenes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FundacionID" ColumnName="FundacionID" />
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pais">
+            <EntityTypeMapping TypeName="FundacionesDBModel.Pais">
+              <MappingFragment StoreEntitySet="Pais">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDContinente" ColumnName="IDContinente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ressenya">
+            <EntityTypeMapping TypeName="FundacionesDBModel.Ressenya">
+              <MappingFragment StoreEntitySet="Ressenya">
+                <ScalarProperty Name="ID_Ressenya" ColumnName="ID_Ressenya" />
+                <ScalarProperty Name="ID_Fundacion" ColumnName="ID_Fundacion" />
+                <ScalarProperty Name="Valoracio" ColumnName="Valoracio" />
+                <ScalarProperty Name="Descripcio" ColumnName="Descripcio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fde84c7544cd492a9eae9a0698b39a10" Name="Diagram1">
+        <EntityTypeShape EntityType="FundacionesDBModel.Categoria" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.Ciutat" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.Continente" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.Fundacion" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.FundacionCategoria" Width="1.5" PointX="9.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.GaleriaImagenes" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.Pais" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.Ressenya" Width="1.5" PointX="9.75" PointY="12.5" IsExpanded="true" />
+        <AssociationConnector Association="FundacionesDBModel.FK__Fundacion__Categ__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="FundacionesDBModel.FK__Ciutat__IDPais__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="FundacionesDBModel.FK__Fundacion__IDCiu__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="FundacionesDBModel.FK__Fundacion__IDCon__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="FundacionesDBModel.FK__Pais__IDContinen__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="FundacionesDBModel.FK__Fundacion__Funda__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="FundacionesDBModel.FK__Fundacion__IDPai__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="FundacionesDBModel.FK__GaleriaIm__Funda__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="FundacionesDBModel.FK__Ressenya__ID_Fun__44FF419A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

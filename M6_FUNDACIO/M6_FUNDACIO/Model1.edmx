@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FundacionesDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="FundacionesDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categoria">
           <Key>
             <PropertyRef Name="ID" />
@@ -43,6 +43,7 @@
           <Property Name="IDContinent" Type="int" />
           <Property Name="IDPais" Type="int" />
           <Property Name="IDCiutat" Type="int" />
+          <Property Name="link_GoogleMaps" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="FundacionCategoria">
           <Key>
@@ -232,8 +233,7 @@
             <End Role="Ressenya" EntitySet="Ressenya" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FundacionesDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -286,6 +286,7 @@
           <NavigationProperty Name="Pais" Relationship="Self.FK__Fundacion__IDPai__403A8C7D" FromRole="Fundacion" ToRole="Pais" />
           <NavigationProperty Name="GaleriaImagenes" Relationship="Self.FK__GaleriaIm__Funda__4D94879B" FromRole="Fundacion" ToRole="GaleriaImagenes" />
           <NavigationProperty Name="Ressenya" Relationship="Self.FK__Ressenya__ID_Fun__44FF419A" FromRole="Fundacion" ToRole="Ressenya" />
+          <Property Name="link_GoogleMaps" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="FundacionCategoria">
           <Key>
@@ -516,6 +517,7 @@
           <EntitySetMapping Name="Fundacion">
             <EntityTypeMapping TypeName="FundacionesDBModel.Fundacion">
               <MappingFragment StoreEntitySet="Fundacion">
+                <ScalarProperty Name="link_GoogleMaps" ColumnName="link_GoogleMaps" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Direccion" ColumnName="Direccion" />

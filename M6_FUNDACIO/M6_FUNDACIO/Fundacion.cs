@@ -34,6 +34,7 @@ namespace M6_FUNDACIO
         public Nullable<int> IDContinent { get; set; }
         public Nullable<int> IDPais { get; set; }
         public Nullable<int> IDCiutat { get; set; }
+        public string link_GoogleMaps { get; set; }
     
         public virtual Ciutat Ciutat { get; set; }
         public virtual Continente Continente { get; set; }

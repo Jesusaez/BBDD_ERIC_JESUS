@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace M6_FUNDACIO.FORMS
 {
-    public partial class FrmGestioPais : Form
+    public partial class FrmGestioCiutats : Form
     {
         private FundacionesDBEntities fundacionesContext { get; set; }
-        public FrmGestioPais(FundacionesDBEntities xfundacionesContext)
+        public FrmGestioCiutats(FundacionesDBEntities xfundacionesContext)
         {
             InitializeComponent();
             fundacionesContext = xfundacionesContext;
@@ -22,12 +22,12 @@ namespace M6_FUNDACIO.FORMS
         private void getContinents()
         {
             Cursor = Cursors.WaitCursor;
-            var qryEstudiants = (from p in fundacionesContext.Continente
-                                 orderby p.Nom
+            var qryEstudiants = (from p in fundacionesContext.Pais
+                                 orderby p.Nombre
                                  select new
                                  {
                                      id = p.ID,
-                                     nom = p.Nom
+                                     nom = p.Nombre
                                  });
 
             cbContinents.DisplayMember = "nom";
@@ -36,17 +36,19 @@ namespace M6_FUNDACIO.FORMS
             Cursor = Cursors.Default;
 
         }
-
-        private void FrmGestioPais_Load(object sender, EventArgs e)
+        private void cbContinents_SelectedIndexChanged(object sender, EventArgs e)
         {
-            getContinents();
+            if (cbContinents.SelectedItem != null)
+            {
+                omplirCiutats();
+            }
         }
 
-        private void omplirContinents()
+        private void omplirCiutats()
         {
-            var qryCursosInscrit = (from c in fundacionesContext.Pais
+            var qryCursosInscrit = (from c in fundacionesContext.Ciutat
                                     orderby c.Nombre
-                                    where (c.IDContinente == (Int32)cbContinents.SelectedValue)
+                                    where (c.IDPais == (Int32)cbContinents.SelectedValue)
                                     select new
                                     {
                                         ID = c.ID,
@@ -56,17 +58,15 @@ namespace M6_FUNDACIO.FORMS
             Cursor = Cursors.WaitCursor;
             dgDades.DataSource = qryCursosInscrit.ToList().Distinct().ToList();
 
-            dgDades.Columns["Nom"].HeaderText = "Nom Pais";
+            dgDades.Columns["Nom"].HeaderText = "Nom Ciutat";
             Cursor = Cursors.Default;
 
         }
 
-        private void cbContinents_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void FrmGestioCiutats_Load(object sender, EventArgs e)
         {
-            if (cbContinents.SelectedItem != null)
-            {
-                omplirContinents();
-            }
+            getContinents();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace M6_FUNDACIO
     public partial class FrmMain : Form
     {
         private FundacionesDBEntities fundacionesContext { get; set; } = new FundacionesDBEntities();
-        FrmGestion fGestion;
+        FrmGestioCiudades fGestion;
         public FrmMain()
         {
             InitializeComponent();
@@ -48,14 +48,14 @@ namespace M6_FUNDACIO
             }
         }
 
-        #region "GESTION"
+        #region "GESTION ZONAS"
         private void ciudadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             String xnom = "Ciudades";
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestion(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
                 fGestion.Name = xnom;
                 fGestion.MdiParent = this;
                 fGestion.Show();
@@ -68,7 +68,20 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestion(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGestion = new FrmGestioPais(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGestion.Name = xnom;
+                fGestion.MdiParent = this;
+                fGestion.Show();
+            }
+            fGestion.Activate();
+        }
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String xnom = "Categorias";
+
+            if (!(ja_esta_obert(xnom)))
+            {
+                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
                 fGestion.Name = xnom;
                 fGestion.MdiParent = this;
                 fGestion.Show();
@@ -78,27 +91,14 @@ namespace M6_FUNDACIO
         #endregion
 
 
-        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            String xnom = "Paises";
-
-            if (!(ja_esta_obert(xnom)))
-            {
-                fGestion = new FrmGestion(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fGestion.Name = xnom;
-                fGestion.MdiParent = this;
-                fGestion.Show();
-            }
-            fGestion.Activate();
-        }
-
+        #region "VISUALIZACIÓN"
         private void galeriaImagenesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String xnom = "Paises";
+            String xnom = "Galeria Imagenes";
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestion(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
                 fGestion.Name = xnom;
                 fGestion.MdiParent = this;
                 fGestion.Show();
@@ -108,11 +108,11 @@ namespace M6_FUNDACIO
 
         private void consultaItemsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String xnom = "Paises";
+            String xnom = "Consulta Items";
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestion(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
                 fGestion.Name = xnom;
                 fGestion.MdiParent = this;
                 fGestion.Show();
@@ -120,13 +120,18 @@ namespace M6_FUNDACIO
             fGestion.Activate();
         }
 
+        #endregion
+
+
+        #region "GESTION"
+
         private void valoracionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             String xnom = "Valoracion";
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestion(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
                 fGestion.Name = xnom;
                 fGestion.MdiParent = this;
                 fGestion.Show();
@@ -140,7 +145,7 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestion(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
                 fGestion.Name = xnom;
                 fGestion.MdiParent = this;
                 fGestion.Show();
@@ -154,7 +159,7 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestion(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
                 fGestion.Name = xnom;
                 fGestion.MdiParent = this;
                 fGestion.Show();
@@ -168,7 +173,7 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestion(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
                 fGestion.Name = xnom;
                 fGestion.MdiParent = this;
                 fGestion.Show();
@@ -182,12 +187,14 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestion(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
                 fGestion.Name = xnom;
                 fGestion.MdiParent = this;
                 fGestion.Show();
             }
             fGestion.Activate();
         }
+
+        #endregion
     }
 }

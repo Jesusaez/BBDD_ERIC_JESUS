@@ -64,17 +64,59 @@
     <Compile Include="Continente.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FrmGestion.cs">
+    <Compile Include="FORMS\FrmConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FrmGestion.Designer.cs">
-      <DependentUpon>FrmGestion.cs</DependentUpon>
+    <Compile Include="FORMS\FrmConsulta.Designer.cs">
+      <DependentUpon>FrmConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmDades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmDades.Designer.cs">
+      <DependentUpon>FrmDades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmGaleria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmGaleria.Designer.cs">
+      <DependentUpon>FrmGaleria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmGestioABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmGestioABM.Designer.cs">
+      <DependentUpon>FrmGestioABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmGestioCiudades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmGestioCiudades.Designer.cs">
+      <DependentUpon>FrmGestioCiudades.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMS\FrmGestioPais.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMS\FrmGestioPais.Designer.cs">
       <DependentUpon>FrmGestioPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmMaps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmMaps.Designer.cs">
+      <DependentUpon>FrmMaps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmMiniaturaWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmMiniaturaWeb.Designer.cs">
+      <DependentUpon>FrmMiniaturaWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmValoracio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmValoracio.Designer.cs">
+      <DependentUpon>FrmValoracio.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -114,6 +156,9 @@
     <Compile Include="Ressenya.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FORMS\FrmGestioABM.resx">
+      <DependentUpon>FrmGestioABM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FrmGestioPais.resx">
       <DependentUpon>FrmGestioPais.cs</DependentUpon>
     </EmbeddedResource>

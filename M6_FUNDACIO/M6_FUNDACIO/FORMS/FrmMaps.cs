@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace M6_FUNDACIO.FORMS
 {
-    public partial class FrmGestion : Form
+    public partial class FrmMaps : Form
     {
         FundacionesDBEntities fundacionesContext;
-        public FrmGestion(FundacionesDBEntities xfundacionesContext)
+        public FrmMaps(FundacionesDBEntities xfundacionesContext)
         {
             InitializeComponent();
             fundacionesContext = xfundacionesContext;

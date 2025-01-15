@@ -1,6 +1,6 @@
 ﻿namespace M6_FUNDACIO.FORMS
 {
-    partial class FrmGestion
+    partial class FrmMaps
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Gestion";
+            this.Text = "FrmMaps";
         }
 
         #endregion

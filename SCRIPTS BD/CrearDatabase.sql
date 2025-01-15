@@ -62,7 +62,7 @@ CREATE TABLE Categoria (
     Nombre NVARCHAR(100) NOT NULL
 );
 
--- Tabla intermedia FundacionCategoria para la relación muchos a muchos
+-- Tabla intermedia FundacionCategoria para la relaci n muchos a muchos
 CREATE TABLE FundacionCategoria (
     ID INT PRIMARY KEY IDENTITY(1,1),
     FundacionID INT NOT NULL,
@@ -79,3 +79,6 @@ CREATE TABLE GaleriaImagenes (
     Descripcion NVARCHAR(MAX),
     FOREIGN KEY (FundacionID) REFERENCES Fundacion(ID)
 );
+
+ALTER TABLE Fundacion
+ADD link_GoogleMaps varchar(100);

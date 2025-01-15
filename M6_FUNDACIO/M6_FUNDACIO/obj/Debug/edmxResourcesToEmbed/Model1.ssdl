@@ -38,6 +38,7 @@
     <Property Name="IDContinent" Type="int" />
     <Property Name="IDPais" Type="int" />
     <Property Name="IDCiutat" Type="int" />
+    <Property Name="link_GoogleMaps" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="FundacionCategoria">
     <Key>

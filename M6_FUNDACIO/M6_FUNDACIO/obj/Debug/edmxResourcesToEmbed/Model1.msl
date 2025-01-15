@@ -29,6 +29,7 @@
     <EntitySetMapping Name="Fundacion">
       <EntityTypeMapping TypeName="FundacionesDBModel.Fundacion">
         <MappingFragment StoreEntitySet="Fundacion">
+          <ScalarProperty Name="link_GoogleMaps" ColumnName="link_GoogleMaps" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Direccion" ColumnName="Direccion" />

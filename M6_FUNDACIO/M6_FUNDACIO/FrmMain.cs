@@ -14,7 +14,16 @@ namespace M6_FUNDACIO
     public partial class FrmMain : Form
     {
         private FundacionesDBEntities fundacionesContext { get; set; } = new FundacionesDBEntities();
-        FrmGestioCiudades fGestion;
+        FrmGestioCiutats fCiudad;
+        FrmGestioPais fPais;
+        FrmGaleria fGaleria;
+        FrmMaps fMaps;
+        FrmMiniaturaWeb fMiniaturaWeb;
+        FrmValoracio fValoracio;
+        FrmDades fDades;
+        FrmCategoria fCategoria;
+        FrmConsulta fConsulta;
+
         public FrmMain()
         {
             InitializeComponent();
@@ -55,12 +64,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fGestion.Name = xnom;
-                fGestion.MdiParent = this;
-                fGestion.Show();
+                fCiudad = new FrmGestioCiutats(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fCiudad.Name = xnom;
+                fCiudad.MdiParent = this;
+                fCiudad.Show();
             }
-            fGestion.Activate();
+            fCiudad.Activate();
         }
         private void paisesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -68,12 +77,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestioPais(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fGestion.Name = xnom;
-                fGestion.MdiParent = this;
-                fGestion.Show();
+                fPais = new FrmGestioPais(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fPais.Name = xnom;
+                fPais.MdiParent = this;
+                fPais.Show();
             }
-            fGestion.Activate();
+            fPais.Activate();
         }
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -81,12 +90,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fGestion.Name = xnom;
-                fGestion.MdiParent = this;
-                fGestion.Show();
+                fCategoria = new FrmCategoria(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fCategoria.Name = xnom;
+                fCategoria.MdiParent = this;
+                fCategoria.Show();
             }
-            fGestion.Activate();
+            fCategoria.Activate();
         }
         #endregion
 
@@ -98,12 +107,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fGestion.Name = xnom;
-                fGestion.MdiParent = this;
-                fGestion.Show();
+                fGaleria = new FrmGaleria(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGaleria.Name = xnom;
+                fGaleria.MdiParent = this;
+                fGaleria.Show();
             }
-            fGestion.Activate();
+            fGaleria.Activate();
         }
 
         private void consultaItemsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,12 +121,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fGestion.Name = xnom;
-                fGestion.MdiParent = this;
-                fGestion.Show();
+                fConsulta = new FrmConsulta(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fConsulta.Name = xnom;
+                fConsulta.MdiParent = this;
+                fConsulta.Show();
             }
-            fGestion.Activate();
+            fConsulta.Activate();
         }
 
         #endregion
@@ -131,12 +140,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fGestion.Name = xnom;
-                fGestion.MdiParent = this;
-                fGestion.Show();
+                fValoracio = new FrmValoracio(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fValoracio.Name = xnom;
+                fValoracio.MdiParent = this;
+                fValoracio.Show();
             }
-            fGestion.Activate();
+            fValoracio.Activate();
         }
 
         private void googleMapsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,12 +154,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fGestion.Name = xnom;
-                fGestion.MdiParent = this;
-                fGestion.Show();
+                fMaps = new FrmMaps(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fMaps.Name = xnom;
+                fMaps.MdiParent = this;
+                fMaps.Show();
             }
-            fGestion.Activate();
+            fMaps.Activate();
         }
 
         private void creacionMiniaturaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -159,12 +168,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fGestion.Name = xnom;
-                fGestion.MdiParent = this;
-                fGestion.Show();
+                fMiniaturaWeb = new FrmMiniaturaWeb(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fMiniaturaWeb.Name = xnom;
+                fMiniaturaWeb.MdiParent = this;
+                fMiniaturaWeb.Show();
             }
-            fGestion.Activate();
+            fMiniaturaWeb.Activate();
         }
 
         private void galeriaImagenesToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -173,12 +182,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fGestion.Name = xnom;
-                fGestion.MdiParent = this;
-                fGestion.Show();
+                fGaleria = new FrmGaleria(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGaleria.Name = xnom;
+                fGaleria.MdiParent = this;
+                fGaleria.Show();
             }
-            fGestion.Activate();
+            fGaleria.Activate();
         }
 
         private void datosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -187,12 +196,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGestion = new FrmGestioCiudades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fGestion.Name = xnom;
-                fGestion.MdiParent = this;
-                fGestion.Show();
+                fDades = new FrmDades(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fDades.Name = xnom;
+                fDades.MdiParent = this;
+                fDades.Show();
             }
-            fGestion.Activate();
+            fDades.Activate();
         }
 
         #endregion

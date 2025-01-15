@@ -49,6 +49,7 @@
     <NavigationProperty Name="Pais" Relationship="Self.FK__Fundacion__IDPai__403A8C7D" FromRole="Fundacion" ToRole="Pais" />
     <NavigationProperty Name="GaleriaImagenes" Relationship="Self.FK__GaleriaIm__Funda__4D94879B" FromRole="Fundacion" ToRole="GaleriaImagenes" />
     <NavigationProperty Name="Ressenya" Relationship="Self.FK__Ressenya__ID_Fun__44FF419A" FromRole="Fundacion" ToRole="Ressenya" />
+    <Property Name="link_GoogleMaps" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="FundacionCategoria">
     <Key>

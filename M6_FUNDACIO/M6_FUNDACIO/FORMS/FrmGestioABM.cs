@@ -28,20 +28,20 @@ namespace M6_FUNDACIO.FORMS
             InitializeComponent();
         }
 
-        private void add()
-        {
-            novesDades();
-            schoolContext.Person.Add(p);
-            schoolContext.SaveChanges();
-        }
+        //private void add()
+        //{
+        //    novesDades();
+        //    schoolContext.Person.Add(p);
+        //    schoolContext.SaveChanges();
+        //}
 
         private void novesDades()
         {
             if (tbNom.Text != "" && tbCognom.Text != "")
             {
-                p.FirstName = tbNom.Text.Trim();
-                p.LastName = tbCognom.Text.Trim();
-                p.EnrollmentDate = dtData.Value.Date;
+                //p.FirstName = tbNom.Text.Trim();
+                //p.LastName = tbCognom.Text.Trim();
+                //p.EnrollmentDate = dtData.Value.Date;
             }
         }
 
@@ -61,7 +61,7 @@ namespace M6_FUNDACIO.FORMS
             switch (op)
             {
                 case 'A':
-                    add();
+                    //add();
                     break;
                 case 'M':
                     mod();
@@ -92,11 +92,11 @@ namespace M6_FUNDACIO.FORMS
         //    else p = new Person();
         //}
 
-        private void omplir()
-        {
-            tbNom.Text = p.FirstName;
-            tbCognom.Text = p.LastName;
-            dtData.Text = p.EnrollmentDate.ToString();
-        }
+        //private void omplir()
+        //{
+        //    tbNom.Text = p.FirstName;
+        //    tbCognom.Text = p.LastName;
+        //    dtData.Text = p.EnrollmentDate.ToString();
+        //}
     }
 }

@@ -68,5 +68,10 @@ namespace M6_FUNDACIO.FORMS
                 omplirContinents();
             }
         }
+
+        private void dgDades_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgDades.SelectedRows[0].Cells["foto"].Value.ToString();
+        }
     }
 }

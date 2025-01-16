@@ -92,6 +92,7 @@
             this.dgDades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDades.Size = new System.Drawing.Size(776, 483);
             this.dgDades.TabIndex = 17;
+            this.dgDades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDades_CellClick);
             // 
             // cbContinents
             // 

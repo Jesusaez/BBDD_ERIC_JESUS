@@ -76,6 +76,12 @@
     <Compile Include="FORMS\FrmConsulta.Designer.cs">
       <DependentUpon>FrmConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMS\FrmCrearCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmCrearCategories.Designer.cs">
+      <DependentUpon>FrmCrearCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\FrmDades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,15 @@
     </Compile>
     <EmbeddedResource Include="FORMS\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmCrearCategories.resx">
+      <DependentUpon>FrmCrearCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmDades.resx">
+      <DependentUpon>FrmDades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmGaleria.resx">
+      <DependentUpon>FrmGaleria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FrmGestioABM.resx">
       <DependentUpon>FrmGestioABM.cs</DependentUpon>

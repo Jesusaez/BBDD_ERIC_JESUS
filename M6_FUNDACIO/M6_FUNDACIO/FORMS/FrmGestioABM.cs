@@ -14,9 +14,8 @@ namespace M6_FUNDACIO.FORMS
     {
         Char op;
         String formOp;
-        public String nom { get; set; } = "";
         public String id { get; set; } = "";
-        public String cognom { get; set; } = "";
+        public String nom { get; set; } = "";
         public DateTime data { get; set; } = new DateTime();
 
         //val
@@ -127,7 +126,7 @@ namespace M6_FUNDACIO.FORMS
                 case 'M':
                     mod();
                     break;
-                case 'D':
+                case 'B':
                     del();
                     break;
             }
@@ -159,10 +158,13 @@ namespace M6_FUNDACIO.FORMS
             }
             else
             {
-                if (formOp == "ciutat") ciu = new Ciutat();
-                else if (formOp == "pais") pais = new Pais();
-                else if (formOp == "categoria") cat = new Categoria();
+                if (formOp == "Ciutat") ciu = new Ciutat();
+                else if (formOp == "Pais") pais = new Pais();
+                else if (formOp == "Categoria") cat = new Categoria();
             }
+
+            if (formOp == "Ciutat") getPais();
+            if (formOp == "Pais") getContinent();
         }
 
         private void omplir()
@@ -171,7 +173,6 @@ namespace M6_FUNDACIO.FORMS
             {
                 case "Ciutat":
                     ciu = fundacionesContext.Ciutat.Find(int.Parse(id.Trim()));
-                    getPais();
                     break;
                 case "Categoria":
                     cat = fundacionesContext.Categoria.Find(int.Parse(id.Trim()));
@@ -179,7 +180,6 @@ namespace M6_FUNDACIO.FORMS
                     break;
                 case "Pais":
                     pais = fundacionesContext.Pais.Find(int.Parse(id.Trim()));
-                    getContinent();
                     break;
             }
             if (ciu != null || cat!= null || pais!= null)

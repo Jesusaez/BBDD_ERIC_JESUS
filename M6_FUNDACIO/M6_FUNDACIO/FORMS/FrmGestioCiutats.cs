@@ -13,6 +13,7 @@ namespace M6_FUNDACIO.FORMS
     public partial class FrmGestioCiutats : Form
     {
         private FundacionesDBEntities fundacionesContext { get; set; }
+        FrmGestioABM fGestioABM;
         public FrmGestioCiutats(FundacionesDBEntities xfundacionesContext)
         {
             InitializeComponent();
@@ -67,6 +68,44 @@ namespace M6_FUNDACIO.FORMS
         private void FrmGestioCiutats_Load(object sender, EventArgs e)
         {
             getContinents();
+        }
+
+        private void pbAdd_Click(object sender, EventArgs e)
+        {
+            fGestioABM = new FrmGestioABM('A',"Ciutat", fundacionesContext);
+            if (dgDades.SelectedRows != null)
+            {
+                fGestioABM.ShowDialog();
+            }
+            omplirCiutats();
+
+            fGestioABM = null;
+        }
+
+        private void pbDel_Click(object sender, EventArgs e)
+        {
+            fGestioABM = new FrmGestioABM('B', "Ciutat", fundacionesContext);
+            if (dgDades.SelectedRows != null)
+            {
+                fGestioABM.ShowDialog();
+            }
+            omplirCiutats();
+
+            fGestioABM = null;
+        }
+
+        private void dgDades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            fGestioABM = new FrmGestioABM('M', "Ciutat", fundacionesContext);
+            fGestioABM.id = dgDades.SelectedRows[0].Cells["id"].Value.ToString().Trim();
+            fGestioABM.nom = dgDades.SelectedRows[0].Cells["nom"].Value.ToString().Trim();
+            if (dgDades.SelectedRows != null)
+            {
+                fGestioABM.ShowDialog();
+            }
+            omplirCiutats();
+
+            fGestioABM = null;
         }
     }
 }

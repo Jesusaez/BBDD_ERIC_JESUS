@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fde84c7544cd492a9eae9a0698b39a10" Name="DBFundaciones">
-        <EntityTypeShape EntityType="FundacionesDBModel.Categoria" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="FundacionesDBModel.Ciutat" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="FundacionesDBModel.Continente" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+      <Diagram DiagramId="fde84c7544cd492a9eae9a0698b39a10" Name="DBFundaciones" ZoomLevel="72">
+        <EntityTypeShape EntityType="FundacionesDBModel.Categoria" Width="1.5" PointX="3.625" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.Ciutat" Width="1.5" PointX="1.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.Continente" Width="1.5" PointX="1.5" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="FundacionesDBModel.Fundacion" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="FundacionesDBModel.FundacionCategoria" Width="1.5" PointX="9.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.FundacionCategoria" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FundacionesDBModel.GaleriaImagenes" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FundacionesDBModel.Pais" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="FundacionesDBModel.Ressenya" Width="1.5" PointX="9.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.Pais" Width="1.5" PointX="1.5" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FundacionesDBModel.Ressenya" Width="1.5" PointX="4" PointY="8.75" IsExpanded="true" />
         <AssociationConnector Association="FundacionesDBModel.FK__Fundacion__Categ__4AB81AF0" ManuallyRouted="false" />
         <AssociationConnector Association="FundacionesDBModel.FK__Ciutat__IDPais__3C69FB99" ManuallyRouted="false" />
         <AssociationConnector Association="FundacionesDBModel.FK__Fundacion__IDCiu__412EB0B6" ManuallyRouted="false" />

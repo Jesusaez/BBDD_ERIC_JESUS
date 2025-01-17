@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbEstudiants = new System.Windows.Forms.ComboBox();
             this.dgNoMatriculat = new System.Windows.Forms.DataGridView();
             this.lbRegio = new System.Windows.Forms.Label();
@@ -56,9 +56,9 @@
             this.dgNoMatriculat.AllowUserToAddRows = false;
             this.dgNoMatriculat.AllowUserToDeleteRows = false;
             this.dgNoMatriculat.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dgNoMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dgNoMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgNoMatriculat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgNoMatriculat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgNoMatriculat.Location = new System.Drawing.Point(401, 109);
@@ -90,9 +90,9 @@
             this.dgMatriculat.AllowUserToAddRows = false;
             this.dgMatriculat.AllowUserToDeleteRows = false;
             this.dgMatriculat.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.dgMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgMatriculat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgMatriculat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgMatriculat.Location = new System.Drawing.Point(14, 109);
@@ -113,6 +113,7 @@
             this.pbDel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDel.TabIndex = 25;
             this.pbDel.TabStop = false;
+            this.pbDel.Click += new System.EventHandler(this.pbDel_Click);
             // 
             // pbAdd
             // 
@@ -123,6 +124,7 @@
             this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAdd.TabIndex = 24;
             this.pbAdd.TabStop = false;
+            this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click);
             // 
             // FrmCategoria
             // 
@@ -137,6 +139,7 @@
             this.Controls.Add(this.dgMatriculat);
             this.Name = "FrmCategoria";
             this.Text = "FrmCategoria";
+            this.Load += new System.EventHandler(this.FrmCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgNoMatriculat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMatriculat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDel)).EndInit();

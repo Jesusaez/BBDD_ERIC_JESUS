@@ -13,6 +13,7 @@ namespace M6_FUNDACIO.FORMS
     public partial class FrmCategoria : Form
     {
         FundacionesDBEntities fundacionesContext;
+        Categoria cat;
         public FrmCategoria(FundacionesDBEntities xfundacionesContext)
         {
             InitializeComponent();
@@ -73,7 +74,7 @@ namespace M6_FUNDACIO.FORMS
 
         private void omplirCategoriaInscrit()
         {
-            var qryCursosInscrit = (from c in fundacionesContext.FundacionCategoria
+            var qryCategoria = (from c in fundacionesContext.FundacionCategoria
                                     orderby c.Categoria.Nombre
                                     where (c.FundacionID == (Int32)cbEstudiants.SelectedValue)
                                     select new
@@ -82,8 +83,25 @@ namespace M6_FUNDACIO.FORMS
                                     });
 
             Cursor = Cursors.WaitCursor;
-            dgMatriculat.DataSource = qryCursosInscrit.ToList().Distinct().ToList();
+            dgMatriculat.DataSource = qryCategoria.ToList().Distinct().ToList();
             Cursor = Cursors.Default;
+        }
+
+        private void FrmCategoria_Load(object sender, EventArgs e)
+        {
+            getFundacions();
+        }
+
+        private void pbAdd_Click(object sender, EventArgs e)
+        {
+            cat.Nombre = dgNoMatriculat.SelectedRows[0].Cells[1].Value.ToString();
+            fundacionesContext.Categoria.Add(cat);
+            //fundacionesContext.SaveChanges();
+        }
+
+        private void pbDel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

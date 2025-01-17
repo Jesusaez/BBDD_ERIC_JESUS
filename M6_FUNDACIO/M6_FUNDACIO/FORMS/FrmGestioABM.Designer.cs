@@ -30,9 +30,8 @@
         {
             this.btCancelar = new System.Windows.Forms.Button();
             this.btAceptar = new System.Windows.Forms.Button();
-            this.dtData = new System.Windows.Forms.DateTimePicker();
-            this.tbCognom = new System.Windows.Forms.TextBox();
             this.tbNom = new System.Windows.Forms.TextBox();
+            this.cbPais = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btCancelar
@@ -44,6 +43,7 @@
             this.btCancelar.TabIndex = 9;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = false;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btAceptar
             // 
@@ -54,27 +54,22 @@
             this.btAceptar.TabIndex = 8;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = false;
-            // 
-            // dtData
-            // 
-            this.dtData.Location = new System.Drawing.Point(64, 155);
-            this.dtData.Name = "dtData";
-            this.dtData.Size = new System.Drawing.Size(268, 22);
-            this.dtData.TabIndex = 7;
-            // 
-            // tbCognom
-            // 
-            this.tbCognom.Location = new System.Drawing.Point(64, 111);
-            this.tbCognom.Name = "tbCognom";
-            this.tbCognom.Size = new System.Drawing.Size(251, 22);
-            this.tbCognom.TabIndex = 6;
+            this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             // 
             // tbNom
             // 
-            this.tbNom.Location = new System.Drawing.Point(64, 64);
+            this.tbNom.Location = new System.Drawing.Point(70, 127);
             this.tbNom.Name = "tbNom";
-            this.tbNom.Size = new System.Drawing.Size(219, 22);
+            this.tbNom.Size = new System.Drawing.Size(439, 22);
             this.tbNom.TabIndex = 5;
+            // 
+            // cbPais
+            // 
+            this.cbPais.FormattingEnabled = true;
+            this.cbPais.Location = new System.Drawing.Point(70, 74);
+            this.cbPais.Name = "cbPais";
+            this.cbPais.Size = new System.Drawing.Size(439, 24);
+            this.cbPais.TabIndex = 10;
             // 
             // FrmGestioABM
             // 
@@ -82,13 +77,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(573, 307);
+            this.Controls.Add(this.cbPais);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
-            this.Controls.Add(this.dtData);
-            this.Controls.Add(this.tbCognom);
             this.Controls.Add(this.tbNom);
             this.Name = "FrmGestioABM";
             this.Text = "FrmGestioABM";
+            this.Load += new System.EventHandler(this.FrmGestioABM_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,8 +93,7 @@
 
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Button btAceptar;
-        private System.Windows.Forms.DateTimePicker dtData;
-        private System.Windows.Forms.TextBox tbCognom;
         private System.Windows.Forms.TextBox tbNom;
+        private System.Windows.Forms.ComboBox cbPais;
     }
 }

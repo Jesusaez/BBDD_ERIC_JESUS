@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|c:\\users\\jesus\\desktop\\cosas_del_segundo_a\u00F1o\\m8\\godot\\bbdd_eric_jesus\\m6_fundacio\\m6_fundacio\\forms\\frmgestioabm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\m6_fundacio\\forms\\frmgestioabm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|solutionrelative:m6_fundacio\\forms\\frmgestioabm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\m6_fundacio\\forms\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|solutionrelative:m6_fundacio\\forms\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|c:\\users\\jesus\\desktop\\cosas_del_segundo_a\u00F1o\\m8\\godot\\bbdd_eric_jesus\\m6_fundacio\\m6_fundacio\\forms\\frmgestioabm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|solutionrelative:m6_fundacio\\forms\\frmgestioabm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|c:\\users\\jesus\\desktop\\cosas_del_segundo_a\u00F1o\\m8\\godot\\bbdd_eric_jesus\\m6_fundacio\\m6_fundacio\\forms\\frmgestiociutats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|solutionrelative:m6_fundacio\\forms\\frmgestiociutats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\m6_fundacio\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|solutionrelative:m6_fundacio\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|c:\\users\\jesus\\desktop\\cosas_del_segundo_a\u00F1o\\m8\\godot\\bbdd_eric_jesus\\m6_fundacio\\m6_fundacio\\forms\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|solutionrelative:m6_fundacio\\forms\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|c:\\users\\jesus\\desktop\\cosas_del_segundo_a\u00F1o\\m8\\godot\\bbdd_eric_jesus\\m6_fundacio\\m6_fundacio\\forms\\frmgestiociutats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|solutionrelative:m6_fundacio\\forms\\frmgestiociutats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\m6_fundacio\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\m6_fundacio\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|solutionrelative:m6_fundacio\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|c:\\users\\jesus\\desktop\\cosas_del_segundo_a\u00F1o\\m8\\godot\\bbdd_eric_jesus\\m6_fundacio\\m6_fundacio\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{5E2C9B53-DBCA-40DB-962E-61530F170338}|M6_FUNDACIO\\M6_FUNDACIO.csproj|solutionrelative:m6_fundacio\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +46,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmGestioCiutats.cs",
+              "DocumentMoniker": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FORMS\\FrmGestioCiutats.cs",
+              "RelativeDocumentMoniker": "M6_FUNDACIO\\FORMS\\FrmGestioCiutats.cs",
+              "ToolTip": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FORMS\\FrmGestioCiutats.cs",
+              "RelativeToolTip": "M6_FUNDACIO\\FORMS\\FrmGestioCiutats.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAhwCEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T13:52:23.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmGestioCiutats.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FORMS\\FrmGestioCiutats.cs",
+              "RelativeDocumentMoniker": "M6_FUNDACIO\\FORMS\\FrmGestioCiutats.cs",
+              "ToolTip": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FORMS\\FrmGestioCiutats.cs [Dise\u00F1o]",
+              "RelativeToolTip": "M6_FUNDACIO\\FORMS\\FrmGestioCiutats.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T13:48:49.281Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmCategoria.cs",
+              "DocumentMoniker": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FORMS\\FrmCategoria.cs",
+              "RelativeDocumentMoniker": "M6_FUNDACIO\\FORMS\\FrmCategoria.cs",
+              "ToolTip": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FORMS\\FrmCategoria.cs",
+              "RelativeToolTip": "M6_FUNDACIO\\FORMS\\FrmCategoria.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAowGAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T16:16:01.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmCategoria.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FORMS\\FrmCategoria.cs",
+              "RelativeDocumentMoniker": "M6_FUNDACIO\\FORMS\\FrmCategoria.cs",
+              "ToolTip": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FORMS\\FrmCategoria.cs [Dise\u00F1o]",
+              "RelativeToolTip": "M6_FUNDACIO\\FORMS\\FrmCategoria.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T16:15:58.078Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmGestioABM.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FORMS\\FrmGestioABM.cs",
+              "RelativeDocumentMoniker": "M6_FUNDACIO\\FORMS\\FrmGestioABM.cs",
+              "ToolTip": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FORMS\\FrmGestioABM.cs [Dise\u00F1o]",
+              "RelativeToolTip": "M6_FUNDACIO\\FORMS\\FrmGestioABM.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T13:38:29.343Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,14 +118,14 @@
               "RelativeDocumentMoniker": "M6_FUNDACIO\\FORMS\\FrmGestioABM.cs",
               "ToolTip": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FORMS\\FrmGestioABM.cs",
               "RelativeToolTip": "M6_FUNDACIO\\FORMS\\FrmGestioABM.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAWwCYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAiwJAAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T16:09:45.189Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Model1.edmx [DBFundaciones]",
               "DocumentMoniker": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\Model1.edmx",
               "RelativeDocumentMoniker": "M6_FUNDACIO\\Model1.edmx",
@@ -55,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "FrmMain.cs",
               "DocumentMoniker": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FrmMain.cs",
               "RelativeDocumentMoniker": "M6_FUNDACIO\\FrmMain.cs",
@@ -63,20 +145,18 @@
               "RelativeToolTip": "M6_FUNDACIO\\FrmMain.cs",
               "ViewState": "AgIAALkAAAAAAAAAAAArwMoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T15:20:09.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-13T15:20:09.774Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "FrmMain.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FrmMain.cs",
               "RelativeDocumentMoniker": "M6_FUNDACIO\\FrmMain.cs",
               "ToolTip": "C:\\Users\\Jesus\\Desktop\\COSAS_DEL_SEGUNDO_A\u00D1O\\M8\\godot\\BBDD_ERIC_JESUS\\M6_FUNDACIO\\M6_FUNDACIO\\FrmMain.cs [Dise\u00F1o]",
               "RelativeToolTip": "M6_FUNDACIO\\FrmMain.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T15:19:58.443Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-01-13T15:19:58.443Z"
             }
           ]
         }

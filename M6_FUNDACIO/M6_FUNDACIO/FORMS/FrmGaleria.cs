@@ -54,7 +54,6 @@ namespace M6_FUNDACIO.FORMS
             dgDades.DataSource = qryCursosInscrit.ToList().Distinct().ToList();
 
             dgDades.Columns["foto"].Visible = false;
-            dgDades.Columns["Nom"].HeaderText = "Nom Pais";
             Cursor = Cursors.Default;
 
         }
@@ -84,7 +83,14 @@ namespace M6_FUNDACIO.FORMS
 
         private void dgDades_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            pbImatge.Image = Base64ToImage(dgDades.SelectedRows[0].Cells["foto"].Value.ToString());
+            if(dgDades.SelectedRows[0].Cells["foto"].Value!=null)
+            {
+                pbImatge.Image = Base64ToImage(dgDades.SelectedRows[0].Cells["foto"].Value.ToString());
+            }
+            else
+            {
+                pbImatge.Image = null;
+            }
             lbDesc.Visible = false;
             tbDesc.Visible = false;
             btAccept.Visible = false;
@@ -131,6 +137,8 @@ namespace M6_FUNDACIO.FORMS
             {
                 MessageBox.Show("No has seleccionat cap fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            getGaleria();
+            pbImatge.Image = null;
         }
 
         private Boolean ferCanvis()
@@ -196,6 +204,10 @@ namespace M6_FUNDACIO.FORMS
             tbDesc.Visible = false;
             btAccept.Visible = false;
             btCancelar.Visible = false;
+            getGaleria();
+            pbImatge.Image = null;
+
         }
+
     }
 }

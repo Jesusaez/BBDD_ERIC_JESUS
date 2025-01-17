@@ -189,6 +189,12 @@
     <EmbeddedResource Include="FORMS\FrmGestioPais.resx">
       <DependentUpon>FrmGestioPais.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmMaps.resx">
+      <DependentUpon>FrmMaps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmMiniaturaWeb.resx">
+      <DependentUpon>FrmMiniaturaWeb.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>

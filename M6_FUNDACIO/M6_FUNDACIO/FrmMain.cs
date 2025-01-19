@@ -14,8 +14,7 @@ namespace M6_FUNDACIO
     public partial class FrmMain : Form
     {
         private FundacionesDBEntities fundacionesContext { get; set; } = new FundacionesDBEntities();
-        FrmGestioCiutats fCiudad;
-        FrmGestioPais fPais;
+        FrmGestioRegions fRegions;
         FrmGaleria fGaleria;
         FrmMaps fMaps;
         FrmMiniaturaWeb fMiniaturaWeb;
@@ -64,12 +63,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fCiudad = new FrmGestioCiutats(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fCiudad.Name = xnom;
-                fCiudad.MdiParent = this;
-                fCiudad.Show();
+                fRegions = new FrmGestioRegions("Ciutat",fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fRegions.Name = xnom;
+                fRegions.MdiParent = this;
+                fRegions.Show();
             }
-            fCiudad.Activate();
+            fRegions.Activate();
         }
         private void paisesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -77,12 +76,12 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fPais = new FrmGestioPais(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
-                fPais.Name = xnom;
-                fPais.MdiParent = this;
-                fPais.Show();
+                fRegions = new FrmGestioRegions("Pais", fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fRegions.Name = xnom;
+                fRegions.MdiParent = this;
+                fRegions.Show();
             }
-            fPais.Activate();
+            fRegions.Activate();
         }
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -107,7 +106,7 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGaleria = new FrmGaleria(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGaleria = new FrmGaleria(false,fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
                 fGaleria.Name = xnom;
                 fGaleria.MdiParent = this;
                 fGaleria.Show();
@@ -182,7 +181,7 @@ namespace M6_FUNDACIO
 
             if (!(ja_esta_obert(xnom)))
             {
-                fGaleria = new FrmGaleria(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fGaleria = new FrmGaleria(true,fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
                 fGaleria.Name = xnom;
                 fGaleria.MdiParent = this;
                 fGaleria.Show();

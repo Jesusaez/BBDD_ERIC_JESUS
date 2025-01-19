@@ -13,6 +13,7 @@ namespace M6_FUNDACIO.FORMS
     public partial class FrmDades : Form
     {
         FundacionesDBEntities fundacionesContext;
+        FrmABMDades fABMDades;
         public FrmDades(FundacionesDBEntities xfundacionesContext)
         {
             InitializeComponent();
@@ -51,6 +52,47 @@ namespace M6_FUNDACIO.FORMS
         private void FrmDades_Load(object sender, EventArgs e)
         {
             omplirFundacions();
+        }
+
+        private void pbAdd_Click(object sender, EventArgs e)
+        {
+            fABMDades = new FrmABMDades('A', fundacionesContext);
+            //fABMDades.idAdd = (int)cbContinents.SelectedValue;
+            if (dgDades.SelectedRows != null)
+            {
+                fABMDades.ShowDialog();
+            }
+            omplirFundacions();
+
+            fABMDades = null;
+        }
+        private void omplirABM(char xOp)
+        {
+            fABMDades = new FrmABMDades(xOp, fundacionesContext);
+            fABMDades.id = dgDades.SelectedRows[0].Cells["id"].Value.ToString().Trim();
+        }
+        private void pbDel_Click(object sender, EventArgs e)
+        {
+            omplirABM('B');
+            if (dgDades.SelectedRows != null)
+            {
+                fABMDades.ShowDialog();
+            }
+            omplirFundacions();
+
+            fABMDades = null;
+        }
+
+        private void dgDades_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            omplirABM('M');
+            if (dgDades.SelectedRows != null)
+            {
+                fABMDades.ShowDialog();
+            }
+            omplirFundacions();
+
+            fABMDades = null;
         }
     }
 }

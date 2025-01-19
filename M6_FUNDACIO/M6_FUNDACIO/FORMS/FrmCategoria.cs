@@ -14,6 +14,7 @@ namespace M6_FUNDACIO.FORMS
     {
         FundacionesDBEntities fundacionesContext;
         FundacionCategoria funCat;
+        FrmGestioABM fGestioABM;
         public FrmCategoria(FundacionesDBEntities xfundacionesContext)
         {
             InitializeComponent();
@@ -110,6 +111,27 @@ namespace M6_FUNDACIO.FORMS
             fundacionesContext.SaveChanges();
             omplirCategoriaInscrit();
             omplirAltresCateogries();
+        }
+
+        private void btNovaCat_Click(object sender, EventArgs e)
+        {
+            fGestioABM = new FrmGestioABM('A', "Categoria", fundacionesContext);
+            fGestioABM.ShowDialog();
+            omplirCategoriaInscrit();
+            omplirAltresCateogries();
+
+            fGestioABM = null;
+        }
+
+        private void btEliminarCat_Click(object sender, EventArgs e)
+        {
+            fGestioABM = new FrmGestioABM('B', "Categoria", fundacionesContext);
+            fGestioABM.id = dgNoMatriculat.SelectedRows[0].Cells["id"].Value.ToString().Trim();
+            fGestioABM.ShowDialog();
+            omplirCategoriaInscrit();
+            omplirAltresCateogries();
+
+            fGestioABM = null;
         }
     }
 }

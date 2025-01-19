@@ -15,10 +15,12 @@ namespace M6_FUNDACIO.FORMS
     public partial class FrmGaleria : Form
     {
         FundacionesDBEntities fundacionesContext;
-        public FrmGaleria(FundacionesDBEntities xfundacionesContext)
+        bool editable;
+        public FrmGaleria(bool xeditable,FundacionesDBEntities xfundacionesContext)
         {
             InitializeComponent();
             fundacionesContext = xfundacionesContext;
+            editable = xeditable;
         }
 
         private void omplircombo()
@@ -78,6 +80,11 @@ namespace M6_FUNDACIO.FORMS
             tbDesc.Visible=false;
             btAccept.Visible = false;
             btCancelar.Visible = false;
+            if (!editable)
+            {
+                pbDel.Visible = false;
+                pbAdd.Visible = false;
+            }
             omplircombo();
         }
 

@@ -13,6 +13,7 @@ namespace M6_FUNDACIO.FORMS
     public partial class FrmCrearCategories : Form
     {
         private FundacionesDBEntities fundacionesContext { get; set; }
+        Categoria cat;
 
         public FrmCrearCategories(FundacionesDBEntities xfundacionesContext)
         {
@@ -41,6 +42,7 @@ namespace M6_FUNDACIO.FORMS
         private void FrmCrearCategories_Load(object sender, EventArgs e)
         {
             omplirCategories();
+            cat = new Categoria();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace M6_FUNDACIO.FORMS
         Char op;
         String formOp;
         public String id { get; set; } = "";
+        public int idAdd { get; set; }
         public String nom { get; set; } = "";
         public DateTime data { get; set; } = new DateTime();
 
@@ -52,7 +54,7 @@ namespace M6_FUNDACIO.FORMS
 
         private void novesDades()
         {
-            if (tbNom.Text != "" && cbPais.Text != "")
+            if (tbNom.Text != "" && cbPais.Text != "" && formOp!="Categoria")
             {
                 switch (formOp)
                 {
@@ -60,20 +62,22 @@ namespace M6_FUNDACIO.FORMS
                         ciu.IDPais = (int)cbPais.SelectedValue;
                         ciu.Nombre = tbNom.Text;
                         break;
-                    case "Categoria":
-                        cat.Nombre = tbNom.Text;
-                        break;
+
                     case "Pais":
                         pais.IDContinente = (int)cbPais.SelectedValue;
                         pais.Nombre = tbNom.Text;
                         break;
                 }
             }
+            else
+            {
+                if (tbNom.Text != "") cat.Nombre = tbNom.Text;
+            }
         }
         private void getPais()
         {
             Cursor = Cursors.WaitCursor;
-            var qryEstudiants = (from p in fundacionesContext.Pais
+            var qryPais = (from p in fundacionesContext.Pais
                                  orderby p.Nombre
                                  select new
                                  {
@@ -83,15 +87,14 @@ namespace M6_FUNDACIO.FORMS
 
             cbPais.DisplayMember = "nom";
             cbPais.ValueMember = "id";
-            cbPais.DataSource = qryEstudiants.ToList();
+            cbPais.DataSource = qryPais.ToList();
             Cursor = Cursors.Default;
-
         }
 
         private void getContinent()
         {
             Cursor = Cursors.WaitCursor;
-            var qryEstudiants = (from p in fundacionesContext.Continente
+            var qryCont = (from p in fundacionesContext.Continente
                                  orderby p.Nom
                                  select new
                                  {
@@ -101,9 +104,8 @@ namespace M6_FUNDACIO.FORMS
 
             cbPais.DisplayMember = "nom";
             cbPais.ValueMember = "id";
-            cbPais.DataSource = qryEstudiants.ToList();
+            cbPais.DataSource = qryCont.ToList();
             Cursor = Cursors.Default;
-
         }
         private void mod()
         {
@@ -118,18 +120,26 @@ namespace M6_FUNDACIO.FORMS
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            switch (op)
+            try
             {
-                case 'A':
-                    add();
-                    break;
-                case 'M':
-                    mod();
-                    break;
-                case 'B':
-                    del();
-                    break;
+                switch (op)
+                {
+                    case 'A':
+                        add();
+                        break;
+                    case 'M':
+                        mod();
+                        break;
+                    case 'B':
+                        del();
+                        break;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al afegir/eliminar les dades " + ex.Message, "ERROR");
+            }
+
             this.Close();
         }
 
@@ -154,6 +164,10 @@ namespace M6_FUNDACIO.FORMS
         {
             if (formOp == "Ciutat") getPais();
             if (formOp == "Pais") getContinent();
+            if (formOp == "Categoria")
+            {
+                cbPais.Visible = false;
+            }
 
             if (op == 'M' || op == 'B')
             {
@@ -169,6 +183,8 @@ namespace M6_FUNDACIO.FORMS
                 if (formOp == "Ciutat") ciu = new Ciutat();
                 else if (formOp == "Pais") pais = new Pais();
                 else if (formOp == "Categoria") cat = new Categoria();
+
+                if(formOp != "Categoria") cbPais.SelectedValue = idAdd;
             }
         }
 

@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbEstudiants = new System.Windows.Forms.ComboBox();
             this.dgNoMatriculat = new System.Windows.Forms.DataGridView();
             this.lbRegio = new System.Windows.Forms.Label();
             this.dgMatriculat = new System.Windows.Forms.DataGridView();
             this.pbDel = new System.Windows.Forms.PictureBox();
             this.pbAdd = new System.Windows.Forms.PictureBox();
-            this.lbCategoria = new System.Windows.Forms.Label();
+            this.btNovaCat = new System.Windows.Forms.Button();
+            this.btEliminarCat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgNoMatriculat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMatriculat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDel)).BeginInit();
@@ -45,6 +46,7 @@
             // 
             // cbEstudiants
             // 
+            this.cbEstudiants.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstudiants.FormattingEnabled = true;
             this.cbEstudiants.Location = new System.Drawing.Point(14, 61);
             this.cbEstudiants.Name = "cbEstudiants";
@@ -57,9 +59,9 @@
             this.dgNoMatriculat.AllowUserToAddRows = false;
             this.dgNoMatriculat.AllowUserToDeleteRows = false;
             this.dgNoMatriculat.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgNoMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgNoMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgNoMatriculat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgNoMatriculat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgNoMatriculat.Location = new System.Drawing.Point(401, 109);
@@ -91,9 +93,9 @@
             this.dgMatriculat.AllowUserToAddRows = false;
             this.dgMatriculat.AllowUserToDeleteRows = false;
             this.dgMatriculat.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgMatriculat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgMatriculat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgMatriculat.Location = new System.Drawing.Point(14, 109);
@@ -127,21 +129,35 @@
             this.pbAdd.TabStop = false;
             this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click);
             // 
-            // lbCategoria
+            // btNovaCat
             // 
-            this.lbCategoria.AutoSize = true;
-            this.lbCategoria.Location = new System.Drawing.Point(428, 618);
-            this.lbCategoria.Name = "lbCategoria";
-            this.lbCategoria.Size = new System.Drawing.Size(44, 16);
-            this.lbCategoria.TabIndex = 29;
-            this.lbCategoria.Text = "label1";
+            this.btNovaCat.BackColor = System.Drawing.Color.PaleGreen;
+            this.btNovaCat.Location = new System.Drawing.Point(323, 611);
+            this.btNovaCat.Name = "btNovaCat";
+            this.btNovaCat.Size = new System.Drawing.Size(129, 50);
+            this.btNovaCat.TabIndex = 29;
+            this.btNovaCat.Text = "NOVA CATEGORIA";
+            this.btNovaCat.UseVisualStyleBackColor = false;
+            this.btNovaCat.Click += new System.EventHandler(this.btNovaCat_Click);
+            // 
+            // btEliminarCat
+            // 
+            this.btEliminarCat.BackColor = System.Drawing.Color.OrangeRed;
+            this.btEliminarCat.Location = new System.Drawing.Point(488, 611);
+            this.btEliminarCat.Name = "btEliminarCat";
+            this.btEliminarCat.Size = new System.Drawing.Size(129, 50);
+            this.btEliminarCat.TabIndex = 30;
+            this.btEliminarCat.Text = "ELIMINAR CATEGORIA";
+            this.btEliminarCat.UseVisualStyleBackColor = false;
+            this.btEliminarCat.Click += new System.EventHandler(this.btEliminarCat_Click);
             // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 694);
-            this.Controls.Add(this.lbCategoria);
+            this.Controls.Add(this.btEliminarCat);
+            this.Controls.Add(this.btNovaCat);
             this.Controls.Add(this.cbEstudiants);
             this.Controls.Add(this.dgNoMatriculat);
             this.Controls.Add(this.lbRegio);
@@ -168,6 +184,7 @@
         private System.Windows.Forms.PictureBox pbDel;
         private System.Windows.Forms.PictureBox pbAdd;
         private System.Windows.Forms.DataGridView dgMatriculat;
-        private System.Windows.Forms.Label lbCategoria;
+        private System.Windows.Forms.Button btNovaCat;
+        private System.Windows.Forms.Button btEliminarCat;
     }
 }

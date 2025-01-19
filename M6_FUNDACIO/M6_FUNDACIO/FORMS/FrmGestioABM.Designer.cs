@@ -65,6 +65,7 @@
             // 
             // cbPais
             // 
+            this.cbPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPais.FormattingEnabled = true;
             this.cbPais.Location = new System.Drawing.Point(70, 74);
             this.cbPais.Name = "cbPais";

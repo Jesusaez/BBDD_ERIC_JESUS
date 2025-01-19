@@ -32,8 +32,6 @@ C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\BBDD_ERIC_JESUS\BBDD_ERIC
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.csproj.AssemblyReference.cache
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmCategoria.resources
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmGestioABM.resources
-C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmGestioCiutats.resources
-C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmGestioPais.resources
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FrmMain.resources
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.Properties.Resources.resources
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.csproj.GenerateResource.cache
@@ -53,3 +51,6 @@ C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDAC
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmGaleria.resources
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmMaps.resources
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmMiniaturaWeb.resources
+C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmValoracio.resources
+C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmGestioRegions.resources
+C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmABMDades.resources

@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbRegio = new System.Windows.Forms.Label();
+            this.dgDades = new System.Windows.Forms.DataGridView();
             this.pbDel = new System.Windows.Forms.PictureBox();
             this.pbAdd = new System.Windows.Forms.PictureBox();
-            this.dgDades = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgDades)).BeginInit();
             this.SuspendLayout();
             // 
             // lbRegio
@@ -53,34 +53,14 @@
             this.lbRegio.TabIndex = 29;
             this.lbRegio.Text = "Dades Fundacions";
             // 
-            // pbDel
-            // 
-            this.pbDel.Image = global::M6_FUNDACIO.Properties.Resources.cancel50;
-            this.pbDel.Location = new System.Drawing.Point(774, 617);
-            this.pbDel.Name = "pbDel";
-            this.pbDel.Size = new System.Drawing.Size(71, 72);
-            this.pbDel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbDel.TabIndex = 28;
-            this.pbDel.TabStop = false;
-            // 
-            // pbAdd
-            // 
-            this.pbAdd.Image = global::M6_FUNDACIO.Properties.Resources.add50;
-            this.pbAdd.Location = new System.Drawing.Point(209, 617);
-            this.pbAdd.Name = "pbAdd";
-            this.pbAdd.Size = new System.Drawing.Size(71, 72);
-            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAdd.TabIndex = 27;
-            this.pbAdd.TabStop = false;
-            // 
             // dgDades
             // 
             this.dgDades.AllowUserToAddRows = false;
             this.dgDades.AllowUserToDeleteRows = false;
             this.dgDades.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgDades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgDades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgDades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDades.Location = new System.Drawing.Point(12, 88);
@@ -91,6 +71,29 @@
             this.dgDades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDades.Size = new System.Drawing.Size(1066, 523);
             this.dgDades.TabIndex = 26;
+            this.dgDades.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDades_CellClick);
+            // 
+            // pbDel
+            // 
+            this.pbDel.Image = global::M6_FUNDACIO.Properties.Resources.cancel50;
+            this.pbDel.Location = new System.Drawing.Point(774, 617);
+            this.pbDel.Name = "pbDel";
+            this.pbDel.Size = new System.Drawing.Size(71, 72);
+            this.pbDel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDel.TabIndex = 28;
+            this.pbDel.TabStop = false;
+            this.pbDel.Click += new System.EventHandler(this.pbDel_Click);
+            // 
+            // pbAdd
+            // 
+            this.pbAdd.Image = global::M6_FUNDACIO.Properties.Resources.add50;
+            this.pbAdd.Location = new System.Drawing.Point(209, 617);
+            this.pbAdd.Name = "pbAdd";
+            this.pbAdd.Size = new System.Drawing.Size(71, 72);
+            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAdd.TabIndex = 27;
+            this.pbAdd.TabStop = false;
+            this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click);
             // 
             // FrmDades
             // 
@@ -105,9 +108,9 @@
             this.Name = "FrmDades";
             this.Text = "FrmDades";
             this.Load += new System.EventHandler(this.FrmDades_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgDades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgDades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

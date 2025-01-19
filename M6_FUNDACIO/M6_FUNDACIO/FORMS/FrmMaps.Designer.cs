@@ -99,6 +99,7 @@
             // 
             // cbContinents
             // 
+            this.cbContinents.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbContinents.FormattingEnabled = true;
             this.cbContinents.Location = new System.Drawing.Point(12, 72);
             this.cbContinents.Name = "cbContinents";

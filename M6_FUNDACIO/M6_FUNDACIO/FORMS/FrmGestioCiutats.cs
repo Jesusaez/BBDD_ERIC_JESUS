@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -84,7 +85,7 @@ namespace M6_FUNDACIO.FORMS
 
         private void pbDel_Click(object sender, EventArgs e)
         {
-            fGestioABM = new FrmGestioABM('B', "Ciutat", fundacionesContext);
+            omplirABM('B',"Ciutat");
             if (dgDades.SelectedRows != null)
             {
                 fGestioABM.ShowDialog();
@@ -93,12 +94,15 @@ namespace M6_FUNDACIO.FORMS
 
             fGestioABM = null;
         }
-
-        private void dgDades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void omplirABM(char xOp, String xGestio)
         {
-            fGestioABM = new FrmGestioABM('M', "Ciutat", fundacionesContext);
+            fGestioABM = new FrmGestioABM(xOp, xGestio, fundacionesContext);
             fGestioABM.id = dgDades.SelectedRows[0].Cells["id"].Value.ToString().Trim();
             fGestioABM.nom = dgDades.SelectedRows[0].Cells["nom"].Value.ToString().Trim();
+        }
+        private void dgDades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            omplirABM('M',"Ciutat");
             if (dgDades.SelectedRows != null)
             {
                 fGestioABM.ShowDialog();

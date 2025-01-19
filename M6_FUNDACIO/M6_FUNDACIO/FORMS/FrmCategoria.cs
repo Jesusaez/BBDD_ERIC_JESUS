@@ -13,7 +13,7 @@ namespace M6_FUNDACIO.FORMS
     public partial class FrmCategoria : Form
     {
         FundacionesDBEntities fundacionesContext;
-        Categoria cat;
+        FundacionCategoria funCat;
         public FrmCategoria(FundacionesDBEntities xfundacionesContext)
         {
             InitializeComponent();
@@ -58,17 +58,15 @@ namespace M6_FUNDACIO.FORMS
                                    orderby c.Nombre
                                    select new
                                    {
-                                       CourseId = c.ID,
-                                       Title = c.Nombre,
+                                       Id = c.ID,
+                                       Categoria = c.Nombre,
                                    });
 
 
 
             Cursor = Cursors.WaitCursor;
             dgNoMatriculat.DataSource = qryAltresCursos.ToList().Distinct().ToList();
-
-            dgNoMatriculat.Columns["CourseID"].Visible = false;
-            dgNoMatriculat.Columns["Title"].HeaderText = "Categoria";
+            dgNoMatriculat.Columns["Id"].Visible = false;
             Cursor = Cursors.Default;
         }
 
@@ -79,29 +77,39 @@ namespace M6_FUNDACIO.FORMS
                                     where (c.FundacionID == (Int32)cbEstudiants.SelectedValue)
                                     select new
                                     {
-                                        Categoria = c.Categoria.Nombre
+                                        Categoria = c.Categoria.Nombre,
+                                        Id = c.ID
                                     });
 
             Cursor = Cursors.WaitCursor;
             dgMatriculat.DataSource = qryCategoria.ToList().Distinct().ToList();
+            dgMatriculat.Columns["Id"].Visible = false;
             Cursor = Cursors.Default;
         }
 
         private void FrmCategoria_Load(object sender, EventArgs e)
         {
             getFundacions();
+            funCat = new FundacionCategoria();
         }
 
         private void pbAdd_Click(object sender, EventArgs e)
         {
-            cat.Nombre = dgNoMatriculat.SelectedRows[0].Cells[1].Value.ToString();
-            fundacionesContext.Categoria.Add(cat);
-            //fundacionesContext.SaveChanges();
+            funCat.FundacionID = (int)cbEstudiants.SelectedValue;
+            funCat.CategoriaID = (int)dgNoMatriculat.SelectedRows[0].Cells["Id"].Value;
+            fundacionesContext.FundacionCategoria.Add(funCat);
+            fundacionesContext.SaveChanges();
+            omplirCategoriaInscrit();
+            omplirAltresCateogries();
         }
 
         private void pbDel_Click(object sender, EventArgs e)
         {
-
+            funCat = fundacionesContext.FundacionCategoria.Find((int)dgMatriculat.SelectedRows[0].Cells["Id"].Value);
+            fundacionesContext.FundacionCategoria.Remove(funCat);
+            fundacionesContext.SaveChanges();
+            omplirCategoriaInscrit();
+            omplirAltresCateogries();
         }
     }
 }

@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbEstudiants = new System.Windows.Forms.ComboBox();
             this.dgNoMatriculat = new System.Windows.Forms.DataGridView();
             this.lbRegio = new System.Windows.Forms.Label();
             this.dgMatriculat = new System.Windows.Forms.DataGridView();
             this.pbDel = new System.Windows.Forms.PictureBox();
             this.pbAdd = new System.Windows.Forms.PictureBox();
+            this.lbCategoria = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgNoMatriculat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMatriculat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDel)).BeginInit();
@@ -56,9 +57,9 @@
             this.dgNoMatriculat.AllowUserToAddRows = false;
             this.dgNoMatriculat.AllowUserToDeleteRows = false;
             this.dgNoMatriculat.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.dgNoMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgNoMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgNoMatriculat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgNoMatriculat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgNoMatriculat.Location = new System.Drawing.Point(401, 109);
@@ -81,18 +82,18 @@
             this.lbRegio.MinimumSize = new System.Drawing.Size(100, 2);
             this.lbRegio.Name = "lbRegio";
             this.lbRegio.Padding = new System.Windows.Forms.Padding(3);
-            this.lbRegio.Size = new System.Drawing.Size(156, 40);
+            this.lbRegio.Size = new System.Drawing.Size(160, 40);
             this.lbRegio.TabIndex = 26;
-            this.lbRegio.Text = "Estudiants";
+            this.lbRegio.Text = "Categories";
             // 
             // dgMatriculat
             // 
             this.dgMatriculat.AllowUserToAddRows = false;
             this.dgMatriculat.AllowUserToDeleteRows = false;
             this.dgMatriculat.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.dgMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgMatriculat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgMatriculat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgMatriculat.Location = new System.Drawing.Point(14, 109);
@@ -126,11 +127,21 @@
             this.pbAdd.TabStop = false;
             this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click);
             // 
+            // lbCategoria
+            // 
+            this.lbCategoria.AutoSize = true;
+            this.lbCategoria.Location = new System.Drawing.Point(428, 618);
+            this.lbCategoria.Name = "lbCategoria";
+            this.lbCategoria.Size = new System.Drawing.Size(44, 16);
+            this.lbCategoria.TabIndex = 29;
+            this.lbCategoria.Text = "label1";
+            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 694);
+            this.Controls.Add(this.lbCategoria);
             this.Controls.Add(this.cbEstudiants);
             this.Controls.Add(this.dgNoMatriculat);
             this.Controls.Add(this.lbRegio);
@@ -157,5 +168,6 @@
         private System.Windows.Forms.PictureBox pbDel;
         private System.Windows.Forms.PictureBox pbAdd;
         private System.Windows.Forms.DataGridView dgMatriculat;
+        private System.Windows.Forms.Label lbCategoria;
     }
 }

@@ -57,14 +57,14 @@ namespace M6_FUNDACIO.FORMS
                 switch (formOp)
                 {
                     case "Ciutat":
-                        ciu.IDPais = cbPais.SelectedIndex;
+                        ciu.IDPais = (int)cbPais.SelectedValue;
                         ciu.Nombre = tbNom.Text;
                         break;
                     case "Categoria":
                         cat.Nombre = tbNom.Text;
                         break;
                     case "Pais":
-                        pais.IDContinente = cbPais.SelectedIndex;
+                        pais.IDContinente = (int)cbPais.SelectedValue;
                         pais.Nombre = tbNom.Text;
                         break;
                 }
@@ -147,14 +147,22 @@ namespace M6_FUNDACIO.FORMS
                     fundacionesContext.Pais.Remove(pais);
                     break;
             }
+            fundacionesContext.SaveChanges();
         }
 
         private void FrmGestioABM_Load(object sender, EventArgs e)
         {
+            if (formOp == "Ciutat") getPais();
+            if (formOp == "Pais") getContinent();
 
-            if (op == 'M')
+            if (op == 'M' || op == 'B')
             {
                 omplir();
+                if (op == 'B')
+                {
+                    cbPais.Enabled = false;
+                    tbNom.Enabled = false;
+                }
             }
             else
             {
@@ -162,9 +170,6 @@ namespace M6_FUNDACIO.FORMS
                 else if (formOp == "Pais") pais = new Pais();
                 else if (formOp == "Categoria") cat = new Categoria();
             }
-
-            if (formOp == "Ciutat") getPais();
-            if (formOp == "Pais") getContinent();
         }
 
         private void omplir()
@@ -188,14 +193,14 @@ namespace M6_FUNDACIO.FORMS
                 {
                     case "Ciutat":
                         tbNom.Text = ciu.Nombre;
-                        cbPais.SelectedIndex = ciu.IDPais;
+                        cbPais.SelectedValue = ciu.IDPais;
                         break;
                     case "Categoria":
                         tbNom.Text = cat.Nombre;
                         break;
                     case "Pais":
                         tbNom.Text = pais.Nombre;
-                        cbPais.SelectedIndex = pais.IDContinente;
+                        cbPais.SelectedValue = pais.IDContinente;
                         break;
                 }
             }

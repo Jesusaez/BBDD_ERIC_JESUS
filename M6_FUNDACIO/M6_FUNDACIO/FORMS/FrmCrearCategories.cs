@@ -13,7 +13,7 @@ namespace M6_FUNDACIO.FORMS
     public partial class FrmCrearCategories : Form
     {
         private FundacionesDBEntities fundacionesContext { get; set; }
-        Categoria cat;
+        FrmGestioABM fGestioABM;
 
         public FrmCrearCategories(FundacionesDBEntities xfundacionesContext)
         {
@@ -42,7 +42,35 @@ namespace M6_FUNDACIO.FORMS
         private void FrmCrearCategories_Load(object sender, EventArgs e)
         {
             omplirCategories();
-            cat = new Categoria();
+        }
+
+        private void pbAdd_Click(object sender, EventArgs e)
+        {
+            fGestioABM = new FrmGestioABM('A', "Categoria", fundacionesContext);
+            fGestioABM.ShowDialog();
+            omplirCategories();
+
+            fGestioABM = null;
+        }
+
+        private void pbDel_Click(object sender, EventArgs e)
+        {
+            fGestioABM = new FrmGestioABM('B', "Categoria", fundacionesContext);
+            fGestioABM.id = dgDades.SelectedRows[0].Cells["id"].Value.ToString().Trim();
+            fGestioABM.ShowDialog();
+            omplirCategories();
+
+            fGestioABM = null;
+        }
+
+        private void dgDades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            fGestioABM = new FrmGestioABM('M', "Categoria", fundacionesContext);
+            fGestioABM.id = dgDades.SelectedRows[0].Cells["id"].Value.ToString().Trim();
+            fGestioABM.ShowDialog();
+            omplirCategories();
+
+            fGestioABM = null;
         }
     }
 }

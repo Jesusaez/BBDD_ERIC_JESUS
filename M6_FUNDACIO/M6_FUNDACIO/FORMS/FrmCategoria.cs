@@ -112,37 +112,5 @@ namespace M6_FUNDACIO.FORMS
             omplirCategoriaInscrit();
             omplirAltresCateogries();
         }
-
-        private void btNovaCat_Click(object sender, EventArgs e)
-        {
-            fGestioABM = new FrmGestioABM('A', "Categoria", fundacionesContext);
-            fGestioABM.ShowDialog();
-            omplirCategoriaInscrit();
-            omplirAltresCateogries();
-
-            fGestioABM = null;
-        }
-
-        private void btEliminarCat_Click(object sender, EventArgs e)
-        {
-            fGestioABM = new FrmGestioABM('B', "Categoria", fundacionesContext);
-            fGestioABM.id = dgNoMatriculat.SelectedRows[0].Cells["id"].Value.ToString().Trim();
-            fGestioABM.ShowDialog();
-            omplirCategoriaInscrit();
-            omplirAltresCateogries();
-
-            fGestioABM = null;
-        }
-
-        private void dgNoMatriculat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            fGestioABM = new FrmGestioABM('M', "Categoria", fundacionesContext);
-            fGestioABM.id = dgNoMatriculat.SelectedRows[0].Cells["id"].Value.ToString().Trim();
-            fGestioABM.ShowDialog();
-            omplirCategoriaInscrit();
-            omplirAltresCateogries();
-
-            fGestioABM = null;
-        }
     }
 }

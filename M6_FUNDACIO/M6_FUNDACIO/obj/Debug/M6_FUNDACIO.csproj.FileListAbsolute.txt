@@ -77,3 +77,4 @@ C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDAC
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\bin\Debug\System.ValueTuple.xml
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\bin\Debug\WebDriver.xml
+C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M8\godot\BBDD_ERIC_JESUS\M6_FUNDACIO\M6_FUNDACIO\obj\Debug\M6_FUNDACIO.FORMS.FrmConsulta.resources

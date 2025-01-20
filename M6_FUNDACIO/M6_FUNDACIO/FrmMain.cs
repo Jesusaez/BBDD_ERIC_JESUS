@@ -22,6 +22,7 @@ namespace M6_FUNDACIO
         FrmDades fDades;
         FrmCategoria fCategoria;
         FrmConsulta fConsulta;
+        FrmCrearCategories fCrearCategories;
 
         public FrmMain()
         {
@@ -204,5 +205,19 @@ namespace M6_FUNDACIO
         }
 
         #endregion
+
+        private void crearEliminarCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String xnom = "Crear/Eliminar Categoria";
+
+            if (!(ja_esta_obert(xnom)))
+            {
+                fCrearCategories = new FrmCrearCategories(fundacionesContext); // fem un nou formulari i l'afegim a la llista de formularis
+                fCrearCategories.Name = xnom;
+                fCrearCategories.MdiParent = this;
+                fCrearCategories.Show();
+            }
+            fCrearCategories.Activate();
+        }
     }
 }

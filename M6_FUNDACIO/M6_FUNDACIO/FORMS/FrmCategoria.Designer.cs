@@ -36,8 +36,6 @@
             this.dgMatriculat = new System.Windows.Forms.DataGridView();
             this.pbDel = new System.Windows.Forms.PictureBox();
             this.pbAdd = new System.Windows.Forms.PictureBox();
-            this.btNovaCat = new System.Windows.Forms.Button();
-            this.btEliminarCat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgNoMatriculat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMatriculat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDel)).BeginInit();
@@ -72,7 +70,6 @@
             this.dgNoMatriculat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgNoMatriculat.Size = new System.Drawing.Size(358, 486);
             this.dgNoMatriculat.TabIndex = 27;
-            this.dgNoMatriculat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgNoMatriculat_CellDoubleClick);
             // 
             // lbRegio
             // 
@@ -130,35 +127,11 @@
             this.pbAdd.TabStop = false;
             this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click);
             // 
-            // btNovaCat
-            // 
-            this.btNovaCat.BackColor = System.Drawing.Color.PaleGreen;
-            this.btNovaCat.Location = new System.Drawing.Point(234, 611);
-            this.btNovaCat.Name = "btNovaCat";
-            this.btNovaCat.Size = new System.Drawing.Size(129, 50);
-            this.btNovaCat.TabIndex = 29;
-            this.btNovaCat.Text = "NOVA CATEGORIA";
-            this.btNovaCat.UseVisualStyleBackColor = false;
-            this.btNovaCat.Click += new System.EventHandler(this.btNovaCat_Click);
-            // 
-            // btEliminarCat
-            // 
-            this.btEliminarCat.BackColor = System.Drawing.Color.OrangeRed;
-            this.btEliminarCat.Location = new System.Drawing.Point(401, 611);
-            this.btEliminarCat.Name = "btEliminarCat";
-            this.btEliminarCat.Size = new System.Drawing.Size(129, 50);
-            this.btEliminarCat.TabIndex = 30;
-            this.btEliminarCat.Text = "ELIMINAR CATEGORIA";
-            this.btEliminarCat.UseVisualStyleBackColor = false;
-            this.btEliminarCat.Click += new System.EventHandler(this.btEliminarCat_Click);
-            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 694);
-            this.Controls.Add(this.btEliminarCat);
-            this.Controls.Add(this.btNovaCat);
             this.Controls.Add(this.cbEstudiants);
             this.Controls.Add(this.dgNoMatriculat);
             this.Controls.Add(this.lbRegio);
@@ -185,7 +158,5 @@
         private System.Windows.Forms.PictureBox pbDel;
         private System.Windows.Forms.PictureBox pbAdd;
         private System.Windows.Forms.DataGridView dgMatriculat;
-        private System.Windows.Forms.Button btNovaCat;
-        private System.Windows.Forms.Button btEliminarCat;
     }
 }

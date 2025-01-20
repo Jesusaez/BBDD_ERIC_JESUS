@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbRegio = new System.Windows.Forms.Label();
             this.pbDel = new System.Windows.Forms.PictureBox();
             this.pbAdd = new System.Windows.Forms.PictureBox();
@@ -62,6 +62,7 @@
             this.pbDel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDel.TabIndex = 24;
             this.pbDel.TabStop = false;
+            this.pbDel.Click += new System.EventHandler(this.pbDel_Click);
             // 
             // pbAdd
             // 
@@ -72,15 +73,16 @@
             this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAdd.TabIndex = 23;
             this.pbAdd.TabStop = false;
+            this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click);
             // 
             // dgDades
             // 
             this.dgDades.AllowUserToAddRows = false;
             this.dgDades.AllowUserToDeleteRows = false;
             this.dgDades.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dgDades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgDades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgDades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDades.Location = new System.Drawing.Point(25, 79);
@@ -91,6 +93,7 @@
             this.dgDades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDades.Size = new System.Drawing.Size(776, 523);
             this.dgDades.TabIndex = 22;
+            this.dgDades.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDades_CellDoubleClick);
             // 
             // FrmCrearCategories
             // 

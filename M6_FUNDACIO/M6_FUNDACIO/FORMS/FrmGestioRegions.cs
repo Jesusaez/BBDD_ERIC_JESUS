@@ -124,6 +124,7 @@ namespace M6_FUNDACIO.FORMS
             fGestioABM.idAdd = (int)cbContinents.SelectedValue;
             if (dgDades.SelectedRows != null)
             {
+                fGestioABM.Name = "Añadir" + gestio;
                 fGestioABM.ShowDialog();
             }
             omplirDades();
@@ -136,6 +137,7 @@ namespace M6_FUNDACIO.FORMS
             omplirABM('B',gestio);
             if (dgDades.SelectedRows != null)
             {
+                fGestioABM.Name = "Eliminar" + gestio;
                 fGestioABM.ShowDialog();
             }
             omplirDades();
@@ -153,6 +155,7 @@ namespace M6_FUNDACIO.FORMS
             omplirABM('M',gestio);
             if (dgDades.SelectedRows != null)
             {
+                fGestioABM.Name = "Modificar" + gestio;
                 fGestioABM.ShowDialog();
             }
             omplirDades();

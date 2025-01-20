@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace M6_FUNDACIO.FORMS
@@ -25,6 +27,7 @@ namespace M6_FUNDACIO.FORMS
         Ciutat ciu;
         Pais pais;
         Categoria cat;
+        Fundacion fund;
         public FrmGestioABM(Char xop, String xformOp, FundacionesDBEntities xfundacionesContext)
         {
             op = xop;
@@ -54,7 +57,7 @@ namespace M6_FUNDACIO.FORMS
 
         private void novesDades()
         {
-            if (tbNom.Text != "" && cbPais.Text != "" && formOp!="Categoria")
+            if (tbNom.Text != "" && cbPais.Text != "" && formOp != "Categoria")
             {
                 switch (formOp)
                 {
@@ -62,16 +65,21 @@ namespace M6_FUNDACIO.FORMS
                         ciu.IDPais = (int)cbPais.SelectedValue;
                         ciu.Nombre = tbNom.Text;
                         break;
-
                     case "Pais":
                         pais.IDContinente = (int)cbPais.SelectedValue;
                         pais.Nombre = tbNom.Text;
                         break;
                 }
             }
-            else
+            else if (formOp == "Categoria")
             {
                 if (tbNom.Text != "") cat.Nombre = tbNom.Text;
+            }
+            else
+            {
+                string lugarCodificado = HttpUtility.UrlEncode(tbNom.Text);
+                string url = $"https://www.google.com/maps/search/?api=1&query={lugarCodificado}&t=k&z=21";
+                fund.link_GoogleMaps = url;
             }
         }
         private void getPais()
@@ -156,6 +164,9 @@ namespace M6_FUNDACIO.FORMS
                 case "Pais":
                     fundacionesContext.Pais.Remove(pais);
                     break;
+                case "Maps":
+                    fund.link_GoogleMaps = null;
+                    break;
             }
             fundacionesContext.SaveChanges();
         }
@@ -168,6 +179,7 @@ namespace M6_FUNDACIO.FORMS
             {
                 cbPais.Visible = false;
             }
+            if (formOp == "Maps") lbMaps.Visible = true;
 
             if (op == 'M' || op == 'B')
             {
@@ -176,6 +188,7 @@ namespace M6_FUNDACIO.FORMS
                 {
                     cbPais.Enabled = false;
                     tbNom.Enabled = false;
+                    lbMaps.Visible = false;
                 }
             }
             else
@@ -183,6 +196,7 @@ namespace M6_FUNDACIO.FORMS
                 if (formOp == "Ciutat") ciu = new Ciutat();
                 else if (formOp == "Pais") pais = new Pais();
                 else if (formOp == "Categoria") cat = new Categoria();
+                else if (formOp == "Maps") fund = new Fundacion();
 
                 if(formOp != "Categoria") cbPais.SelectedValue = idAdd;
             }
@@ -202,8 +216,12 @@ namespace M6_FUNDACIO.FORMS
                 case "Pais":
                     pais = fundacionesContext.Pais.Find(int.Parse(id.Trim()));
                     break;
+                case "Maps":
+                    fund = fundacionesContext.Fundacion.Find(int.Parse(id.Trim()));
+                    cbPais.Visible = false;
+                    break;
             }
-            if (ciu != null || cat!= null || pais!= null)
+            if (ciu != null || cat!= null || pais!= null || fund!=null)
             {
                 switch (formOp)
                 {
@@ -217,6 +235,9 @@ namespace M6_FUNDACIO.FORMS
                     case "Pais":
                         tbNom.Text = pais.Nombre;
                         cbPais.SelectedValue = pais.IDContinente;
+                        break;
+                    case "Maps":
+                        tbNom.Text = fund.link_GoogleMaps;
                         break;
                 }
             }

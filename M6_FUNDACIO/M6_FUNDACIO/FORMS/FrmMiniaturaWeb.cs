@@ -21,51 +21,65 @@ namespace M6_FUNDACIO.FORMS
             InitializeComponent();
             fundacionesContext = xfundacionesContext;
         }
-
-
         private Bitmap CaptureWebPage(string url)
         {
+            Cursor = Cursors.WaitCursor;
+
             Bitmap result = null;
 
             var thread = new Thread(() =>
             {
                 using (WebBrowser browser = new WebBrowser())
                 {
-                    // Configurar la web
                     browser.ScrollBarsEnabled = false;
                     browser.ScriptErrorsSuppressed = true;
 
-                    // evento
                     browser.DocumentCompleted += (s, e) =>
                     {
-                        // Ajustar tamaño 
-                        browser.Width = browser.Document.Body.ScrollRectangle.Width;
-                        browser.Height = browser.Document.Body.ScrollRectangle.Height;
+                        if (browser.ReadyState == WebBrowserReadyState.Complete && browser.Url.ToString() == url)
+                        {
+                            browser.Width = browser.Document.Body.ScrollRectangle.Width;
+                            browser.Height = 1080;
 
-                        // Renderizar la página en un Bitmap 
-                        result = new Bitmap(browser.Width, browser.Height);
-                        browser.DrawToBitmap(result, new Rectangle(0, 0, result.Width, result.Height));
+                            result = new Bitmap(browser.Width, browser.Height);
+                            browser.DrawToBitmap(result, new Rectangle(0, 0, result.Width, result.Height));
+                        }
+                        else
+                        {
+                            browser.Navigate("https://www.wikipedia.org");
+                            browser.DocumentCompleted += (s2, e2) =>
+                            {
+                                browser.Width = browser.Document.Body.ScrollRectangle.Width;
+                                browser.Height = 1080;
 
-                        // Salir del hilo
+                                result = new Bitmap(browser.Width, browser.Height);
+                                browser.DrawToBitmap(result, new Rectangle(0, 0, result.Width, result.Height));
+
+                                Application.ExitThread();
+                            };
+                            return;
+                        }
+
                         Application.ExitThread();
                     };
 
-                    // ir a la URL
                     browser.Navigate(url);
                     Application.Run();
                 }
             });
 
-            // Configurar el hilo
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
-            thread.Join(); // Esperar a que el hilo acabe
+            thread.Join();
 
-            return result; // dar la captura
+            Cursor = Cursors.Default;
+
+            return result;
         }
 
         private void getMiniaturaWeb()
         {
+            Cursor = Cursors.WaitCursor;
             var qryCursosInscrit = (from c in fundacionesContext.Fundacion
                                     select new
                                     {
@@ -75,8 +89,7 @@ namespace M6_FUNDACIO.FORMS
                                         foto = c.FotoWeb
                                     });
 
-            Cursor = Cursors.WaitCursor;
-            dgDades.DataSource = qryCursosInscrit.ToList().Distinct().ToList();
+            dgDades.DataSource = qryCursosInscrit.ToList();
             dgDades.Columns["Link_Web"].HeaderText = "Link Pagina Web";
             dgDades.Columns["foto"].Visible = false;
             Cursor = Cursors.Default;
@@ -121,7 +134,7 @@ namespace M6_FUNDACIO.FORMS
         private void pbAdd_Click(object sender, EventArgs e)
         {
             string xid = dgDades.SelectedRows[0].Cells["id"].Value.ToString().Trim();
-            string xlink = dgDades.SelectedRows[0].Cells["Link Pagina Web"].Value.ToString();
+            string xlink = dgDades.SelectedRows[0].Cells["Link_Web"].Value.ToString();
 
             Bitmap imagenWeb = CaptureWebPage(xlink);
             pbImatge.Image = imagenWeb;

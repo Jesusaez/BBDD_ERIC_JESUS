@@ -32,6 +32,7 @@
             this.btAceptar = new System.Windows.Forms.Button();
             this.tbNom = new System.Windows.Forms.TextBox();
             this.cbPais = new System.Windows.Forms.ComboBox();
+            this.lbMaps = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btCancelar
@@ -72,12 +73,24 @@
             this.cbPais.Size = new System.Drawing.Size(439, 24);
             this.cbPais.TabIndex = 10;
             // 
+            // lbMaps
+            // 
+            this.lbMaps.AutoSize = true;
+            this.lbMaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaps.Location = new System.Drawing.Point(19, 90);
+            this.lbMaps.Name = "lbMaps";
+            this.lbMaps.Size = new System.Drawing.Size(490, 18);
+            this.lbMaps.TabIndex = 11;
+            this.lbMaps.Text = "Añade una ubicacion y el programa la convertirá en un link a google maps";
+            this.lbMaps.Visible = false;
+            // 
             // FrmGestioABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(573, 307);
+            this.Controls.Add(this.lbMaps);
             this.Controls.Add(this.cbPais);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
@@ -96,5 +109,6 @@
         private System.Windows.Forms.Button btAceptar;
         private System.Windows.Forms.TextBox tbNom;
         private System.Windows.Forms.ComboBox cbPais;
+        private System.Windows.Forms.Label lbMaps;
     }
 }

@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbRegio = new System.Windows.Forms.Label();
             this.dgDades = new System.Windows.Forms.DataGridView();
             this.pbDel = new System.Windows.Forms.PictureBox();
             this.pbAdd = new System.Windows.Forms.PictureBox();
             this.cbContinents = new System.Windows.Forms.ComboBox();
-            this.btCancelar = new System.Windows.Forms.Button();
-            this.btAccept = new System.Windows.Forms.Button();
-            this.lbLink = new System.Windows.Forms.Label();
-            this.tbLink = new System.Windows.Forms.TextBox();
+            this.btObrirMaps = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgDades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
@@ -63,9 +60,9 @@
             this.dgDades.AllowUserToAddRows = false;
             this.dgDades.AllowUserToDeleteRows = false;
             this.dgDades.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgDades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dgDades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgDades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDades.Location = new System.Drawing.Point(12, 122);
@@ -86,6 +83,7 @@
             this.pbDel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDel.TabIndex = 32;
             this.pbDel.TabStop = false;
+            this.pbDel.Click += new System.EventHandler(this.pbDel_Click);
             // 
             // pbAdd
             // 
@@ -96,6 +94,7 @@
             this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAdd.TabIndex = 31;
             this.pbAdd.TabStop = false;
+            this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click);
             // 
             // cbContinents
             // 
@@ -107,51 +106,23 @@
             this.cbContinents.TabIndex = 34;
             this.cbContinents.SelectedIndexChanged += new System.EventHandler(this.cbContinents_SelectedIndexChanged);
             // 
-            // btCancelar
+            // btObrirMaps
             // 
-            this.btCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btCancelar.Location = new System.Drawing.Point(445, 649);
-            this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(90, 42);
-            this.btCancelar.TabIndex = 38;
-            this.btCancelar.Text = "Cancelar";
-            this.btCancelar.UseVisualStyleBackColor = false;
-            // 
-            // btAccept
-            // 
-            this.btAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btAccept.Location = new System.Drawing.Point(667, 649);
-            this.btAccept.Name = "btAccept";
-            this.btAccept.Size = new System.Drawing.Size(90, 42);
-            this.btAccept.TabIndex = 37;
-            this.btAccept.Text = "Aceptar";
-            this.btAccept.UseVisualStyleBackColor = false;
-            // 
-            // lbLink
-            // 
-            this.lbLink.AutoSize = true;
-            this.lbLink.Location = new System.Drawing.Point(399, 567);
-            this.lbLink.Name = "lbLink";
-            this.lbLink.Size = new System.Drawing.Size(68, 16);
-            this.lbLink.TabIndex = 36;
-            this.lbLink.Text = "Link Maps";
-            // 
-            // tbLink
-            // 
-            this.tbLink.Location = new System.Drawing.Point(399, 593);
-            this.tbLink.Name = "tbLink";
-            this.tbLink.Size = new System.Drawing.Size(379, 22);
-            this.tbLink.TabIndex = 35;
+            this.btObrirMaps.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btObrirMaps.Location = new System.Drawing.Point(885, 593);
+            this.btObrirMaps.Name = "btObrirMaps";
+            this.btObrirMaps.Size = new System.Drawing.Size(118, 52);
+            this.btObrirMaps.TabIndex = 39;
+            this.btObrirMaps.Text = "Obrir Google Maps";
+            this.btObrirMaps.UseVisualStyleBackColor = false;
+            this.btObrirMaps.Click += new System.EventHandler(this.btObrirMaps_Click);
             // 
             // FrmMaps
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 722);
-            this.Controls.Add(this.btCancelar);
-            this.Controls.Add(this.btAccept);
-            this.Controls.Add(this.lbLink);
-            this.Controls.Add(this.tbLink);
+            this.Controls.Add(this.btObrirMaps);
             this.Controls.Add(this.cbContinents);
             this.Controls.Add(this.lbRegio);
             this.Controls.Add(this.pbDel);
@@ -176,9 +147,6 @@
         private System.Windows.Forms.PictureBox pbAdd;
         private System.Windows.Forms.DataGridView dgDades;
         private System.Windows.Forms.ComboBox cbContinents;
-        private System.Windows.Forms.Button btCancelar;
-        private System.Windows.Forms.Button btAccept;
-        private System.Windows.Forms.Label lbLink;
-        private System.Windows.Forms.TextBox tbLink;
+        private System.Windows.Forms.Button btObrirMaps;
     }
 }

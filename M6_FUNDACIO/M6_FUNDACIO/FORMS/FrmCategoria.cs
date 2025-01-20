@@ -133,5 +133,16 @@ namespace M6_FUNDACIO.FORMS
 
             fGestioABM = null;
         }
+
+        private void dgNoMatriculat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            fGestioABM = new FrmGestioABM('M', "Categoria", fundacionesContext);
+            fGestioABM.id = dgNoMatriculat.SelectedRows[0].Cells["id"].Value.ToString().Trim();
+            fGestioABM.ShowDialog();
+            omplirCategoriaInscrit();
+            omplirAltresCateogries();
+
+            fGestioABM = null;
+        }
     }
 }

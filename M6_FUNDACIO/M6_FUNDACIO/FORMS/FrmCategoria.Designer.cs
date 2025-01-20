@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbEstudiants = new System.Windows.Forms.ComboBox();
             this.dgNoMatriculat = new System.Windows.Forms.DataGridView();
             this.lbRegio = new System.Windows.Forms.Label();
@@ -59,9 +59,9 @@
             this.dgNoMatriculat.AllowUserToAddRows = false;
             this.dgNoMatriculat.AllowUserToDeleteRows = false;
             this.dgNoMatriculat.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dgNoMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgNoMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgNoMatriculat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgNoMatriculat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgNoMatriculat.Location = new System.Drawing.Point(401, 109);
@@ -72,6 +72,7 @@
             this.dgNoMatriculat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgNoMatriculat.Size = new System.Drawing.Size(358, 486);
             this.dgNoMatriculat.TabIndex = 27;
+            this.dgNoMatriculat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgNoMatriculat_CellDoubleClick);
             // 
             // lbRegio
             // 
@@ -93,9 +94,9 @@
             this.dgMatriculat.AllowUserToAddRows = false;
             this.dgMatriculat.AllowUserToDeleteRows = false;
             this.dgMatriculat.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgMatriculat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgMatriculat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgMatriculat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgMatriculat.Location = new System.Drawing.Point(14, 109);
@@ -132,7 +133,7 @@
             // btNovaCat
             // 
             this.btNovaCat.BackColor = System.Drawing.Color.PaleGreen;
-            this.btNovaCat.Location = new System.Drawing.Point(323, 611);
+            this.btNovaCat.Location = new System.Drawing.Point(234, 611);
             this.btNovaCat.Name = "btNovaCat";
             this.btNovaCat.Size = new System.Drawing.Size(129, 50);
             this.btNovaCat.TabIndex = 29;
@@ -143,7 +144,7 @@
             // btEliminarCat
             // 
             this.btEliminarCat.BackColor = System.Drawing.Color.OrangeRed;
-            this.btEliminarCat.Location = new System.Drawing.Point(488, 611);
+            this.btEliminarCat.Location = new System.Drawing.Point(401, 611);
             this.btEliminarCat.Name = "btEliminarCat";
             this.btEliminarCat.Size = new System.Drawing.Size(129, 50);
             this.btEliminarCat.TabIndex = 30;
